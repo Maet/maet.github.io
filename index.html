@@ -25,15 +25,17 @@
 <style>
     body,
     h5 {
-        font-size: 2.9vw;
+        font-size: 1.6vw;
         font-family: "Lato", sans-serif;
+        text-align: center;
     }
     h4 {
-        font-size: 2.1vw;
+        font-size: 1.3vw;
         font-family: "Lato", sans-serif;
+        text-align: center;
     }
     p {
-        font-size: 1vw;
+        font-size: 1.1vw;
         font-family: "Lato", sans-serif;
     }
     body,
@@ -47,75 +49,65 @@
     
     /* Create a Parallax Effect */
     
-    .bgimg-1 {
-        opacity: 1;
-        background-attachment: fixed;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        
-        transform: scale(0.45, 0.45);
-        -ms-transform: scale(0.45, 0.45); 
-        -webkit-transform: scale(0.45, 0.45);
-  
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        min-height: 100%;
-        background-image: url('artworks/artwork1.svg');
+   .space {
+        margin: auto;
+        height: 25%;
+       
     }
-    /* Create a Parallax Effect */
     
-    .bgimg-2 {
-        opacity: 1;
-        background-attachment: fixed;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        transform: scale(0.45, 0.45);
-        -ms-transform: scale(0.45, 0.45); 
-        -webkit-transform: scale(0.45, 0.45);
-        
-        
+    .smallspace {
+        margin: auto;
+        height: 5%;
+       
+    }
+    
+    .mediumspace {
+        margin: auto;
+        height: 12.5%;
+       
+    }
+    
+    
+    .header {
+        margin: auto;
+        width: 50%;
+        background-image: url('artworks/artwork1.svg');
+        background-size: 100%;
         background-position: center;
         background-repeat: no-repeat;
-        background-size: cover;
-        min-height: 100%;
-        background-image: url('artworks/artwork2.svg');
-    }
-    .bgimg-3 {
-        opacity: 1;
-        background-attachment: fixed;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        transform: scale(0.45, 0.45);
-        -ms-transform: scale(0.45, 0.45); 
-        -webkit-transform: scale(0.45, 0.45);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        min-height: 100%;
-        background-image: url('artworks/artwork3.svg');
     }
+    
+    .center {
+    padding: 22.6%;
+    text-align: center;
+}
+    
+    
     .about {
         margin: auto;
-        width: 45%;
-        
-        padding: 20px;
+        width: 50%;
+        padding: 4%;
         text-align: left;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        
+    }
+    .projects {
+        margin: auto;
+        width: 50%;
+        background-image: url('artworks/artwork2.svg');
+        background-size: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
     .slideshow {
         margin: auto;
         width: 48%;
     }
-    div.polaroid {
-        width: 90%;
-        background-color: white;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        margin: auto;
-        margin-bottom: 10%;
-    }
-    div.container {
-        text-align: center;
-        padding: 10px;
+    
         
-    }
+    
     .videowrapper {
         float: none;
         clear: both;
@@ -134,14 +126,12 @@
         height: 100%;
         
     
-
 }
 .btn-link {
     outline: none;
     background-color: transparent;
 }
    
-
 .close
     {
     outline: none;
@@ -149,91 +139,95 @@
     body.modal-open {
     overflow: visible;
 }
-
    
     
 </style>
 
 <body>
-    <div class="bgimg-1 w3-animate-opacity">
-        <div class="w3-display-middle" style="white-space:nowrap;"> <span class="w3-center w3-padding-xxlarge w3-wide ">Mattia Davide Amico</span><h4>Sonic Interaction Designer</h4>
+    
+    
+<div class="space">
 </div>
+<div class="header w3-animate-opacity">
+<div class="center">
+<h5>Mattia Davide Amico</h5>
+<h4>Sonic Interaction Designer</h4>
+</div>
+</div>
+<div class="space">
 </div>
 <div class="about">
 <div class="w3-row ">
-<div class="w3-half"><p>Competenze</p>
+<div class="w3-half"><p>Skills</p>
 </div>
-<div class="w3-half"><p>Trattamento del segnale audio anlogico e digitale, Acustica musicale, Psicoacustica, Elettroacustica, Tecniche di campionamento, Tecniche di amplificazione, Live electronics, Composizione Elettroacustica, Composizione Elettronica, Tecniche di programmazione per l'improvvisazione audiovisiva</p>
+<div class="w3-half"><p>Audio signal processing, Acoustic, Psicoacoustic, Electroacoustic, Realtime generative A/V processing, Sound Design, Sound Technologies</p>
 </div>
-<div class="w3-half"><p>Software</p>
 </div>
-<div class="w3-half"><p>Max/Msp, Pure Data, C-Sound, Ableton, Coge, Renoise, Logic, Pro Tools, Reason, Resolume, Cell Dna, Adobe Audition, Cubase, Digital Performer, Audiosculpt</p>
 </div>
-<div class="w3-half"><p>Esperienze Professionali</p>
+<div class="smallspace">
 </div>
-<div class="w3-half"><p>Co-Developer for "SYN" (interactive murble musical interface), Mario Coppola</p><p>Co-Developer for "TACTO" (interactive musical table), Officine Tesla</p><p>Music Producer for "The Mo'Joes" interactive Entertainment, Tallin
+<div class="about">
+<div class="w3-row ">
+<div class="w3-half">
+<p>Software knowledge</p>
+</div>
+<div class="w3-half">
+<p>Max/Msp, Pure Data, C-Sound, Ableton, Coge, Renoise, Logic, Pro Tools, Reason, Resolume, Cell Dna, Adobe Audition, Cubase, Digital Performer, Audiosculpt</p>
+</div>
+</div>
+</div>
+<div class="smallspace">
+</div>
+<div class="about">
+<div class="w3-row ">
+<div class="w3-half">
+<p>Professional experience</p>
+</div>
+<div class="w3-half">
+<p>Co-Developer for "SYN" (interactive murble musical interface), Mario Coppola</p><p>Co-Developer for "TACTO" (interactive musical table), Officine Tesla</p><p>Music Producer for "The Mo'Joes" interactive Entertainment, Tallin
 </p><p>Developer, Livid instrument, Texas
 </p><p>Producer, Carosello Records, Milano
-</p><p>Musicista, Producer, Sound Engineering, SONY Italia, Rome
+</p><p>Musician, Producer, Sound Engineering, SONY Italia, Rome
 </p><p>Sound Engineering, MAYBESIX, Varese
 </p><p>Video Game Composer, Milestone, Milano
 </p>
 </div>
-<div class="w3-half"><p>Attività associative</p>
-</div>
-<div class="w3-half"><p>Co-founder, Officine Tesla, Milano</p><p>Co-founder, Lucida Console, Milano</p><p>Co-founder, PC HUNTER, Lecco</p></div>
-<div class="w3-half">
-<p>Aree di interesse</p>
-</div>
-<div class="w3-half"><p>Composizione di musica elettronica, elettroacustica, programmazione strumenti meccanici, sistemi d'interazione uomo-macchina, liuteria elettromeccanica, sistemi generativi per la composizione assistita, nuove tecnologie</p></div>
 </div>
 </div>
-<div class="bgimg-2 w3-animate-opacity">
-<div class="w3-display-middle w3-animate-opacity" style="white-space:nowrap;">
-        <span class="w3-center w3-padding-xxlarge w3-wide w3-trasparent ">Projects
+<div class="smallspace">
 </div>
-</div>
-<div class="slideshow">
+<div class="about">
 <div class="w3-row ">
-<div class="w3-half" >
-</div>
-<div class="w3-half" >
-</div>
-  
 <div class="w3-half">
+<p>Association activities</p>
 </div>
 <div class="w3-half">
+<p>Co-founder, Officine Tesla, Milano</p><p>Co-founder, Lucida Console, Milano</p><p>Co-founder, PC HUNTER, Lecco</p>
+</div>
+</div>
+</div>
+<div class="smallspace">
+</div>
+<div class="about">
+<div class="w3-row ">
+<div class="w3-half">
+<p>Areas of interest</p>
 </div>
 <div class="w3-half">
-</div>
-<div class="w3-half">
-</div>
-
-<div class="w3-half">
-</div>
-<div class="w3-half">
-
+<p>Interaction design, digital liuthery, electromecanic musical instruments, generative music, cognitive modelling, computer assisted music, new technologies, kinetic art, cymatics</p>
 </div>
 </div>
 </div>
-
-     
-    <div class="modal w3-animate-opacity" id="videoModal" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        
-    <div class="modal-dialog">
-        
-     
-        <div class="modal-body">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span> </button>
-            <div class="videowrapper">
-                <iframe width="" height="" src="" frameborder="0" allowfullscreen></iframe>
-            </div>
-           
-        </div>
+<div class="mediumspace">
+</div>
+<div class="projects w3-animate-opacity">
+<div class="center">
+<h5>Projects</h5>
+</div>
+</div>    
     
-    </div>
-    </div>
-    <div class="bgimg-3 w3-display-container"> </div>
-</body>
-
+        
+<body>
 </html>
+    
+   
