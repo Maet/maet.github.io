@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<title>Mattia Davide Amico Sonic Interaction Design</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
+<link rel="stylesheet" href="css/lato.css">
+<link rel="stylesheet" href="css/font.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/modal.css">
+<script src="js/jquery.js"></script>
+<script src="js/modal.js"></script>
+<script>
+    $(function() {
+        $(".video").click(function() {
+            var theModal = $(this).data("target"),
+                videoSRC = $(this).attr("data-video"),
+                videoSRCauto = videoSRC + "?modestbranding=1&rel=0&controls=0&showinfo=0&html5=1&autoplay=1";
+            $(theModal + ' iframe').attr('src', videoSRCauto);
+            $(theModal + ' button.close').click(function() {
+                $(theModal + ' iframe').attr('src', videoSRC);
+            });
+        });
+    });
+</script>
+<style>
+    body,
+    h5 {
+        font-size: 2.9vw;
+        font-family: "Lato", sans-serif;
+    }
+    h4 {
+        font-size: 2.1vw;
+        font-family: "Lato", sans-serif;
+    }
+    p {
+        font-size: 1vw;
+        font-family: "Lato", sans-serif;
+    }
+    body,
+    html {
+        height: 100%;
+        color: #000;
+        line-height: 1.8;
+    }
+    /* Create a Parallax Effect */
+    
+    .bgimg-1 {
+        opacity: 1;
+        background-attachment: fixed;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        
+        transform: scale(0.45, 0.45);
+        -ms-transform: scale(0.45, 0.45); 
+        -webkit-transform: scale(0.45, 0.45);
+  
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 100%;
+        background-image: url('artworks/artwork1.svg');
+    }
+    /* Create a Parallax Effect */
+    
+    .bgimg-2 {
+        opacity: 1;
+        background-attachment: fixed;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        transform: scale(0.45, 0.45);
+        -ms-transform: scale(0.45, 0.45); 
+        -webkit-transform: scale(0.45, 0.45);
+        
+        
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 100%;
+        background-image: url('artworks/artwork2.svg');
+    }
+    .bgimg-3 {
+        opacity: 1;
+        background-attachment: fixed;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        transform: scale(0.45, 0.45);
+        -ms-transform: scale(0.45, 0.45); 
+        -webkit-transform: scale(0.45, 0.45);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 100%;
+        background-image: url('artworks/artwork3.svg');
+    }
+    .about {
+        margin: auto;
+        width: 45%;
+        
+        padding: 20px;
+        text-align: left;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    .slideshow {
+        margin: auto;
+        width: 48%;
+    }
+    div.polaroid {
+        width: 90%;
+        background-color: white;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        margin: auto;
+        margin-bottom: 10%;
+    }
+    div.container {
+        text-align: center;
+        padding: 10px;
+        
+    }
+    .videowrapper {
+        float: none;
+        clear: both;
+        width: 100%;
+        
+        position: relative;
+        padding-bottom: 56.25%;
+        padding-top: 25px;
+        height: 0;
+    }
+    .videowrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        
+    
+
+}
+.btn-link {
+    outline: none;
+    background-color: transparent;
+}
+   
+
+.close
+    {
+    outline: none;
+}  
+    body.modal-open {
+    overflow: visible;
+}
+
+   
+    
+</style>
+
+<body>
+    <div class="bgimg-1 w3-animate-opacity">
+        <div class="w3-display-middle" style="white-space:nowrap;"> <span class="w3-center w3-padding-xxlarge w3-wide ">Mattia Davide Amico<h4>Sonic Interaction Designer</h4>
+</div>
+</div>
+<div class="about">
+<div class="w3-row ">
+<div class="w3-half"><p>Competenze</p>
+</div>
+<div class="w3-half"><p>Trattamento del segnale audio anlogico e digitale, Acustica musicale, Psicoacustica, Elettroacustica, Tecniche di campionamento, Tecniche di amplificazione, Live electronics, Composizione Elettroacustica, Composizione Elettronica, Tecniche di programmazione per l'improvvisazione audiovisiva</p>
+</div>
+<div class="w3-half"><p>Software</p>
+</div>
+<div class="w3-half"><p>Max/Msp, Pure Data, C-Sound, Ableton, Coge, Renoise, Logic, Pro Tools, Reason, Resolume, Cell Dna, Adobe Audition, Cubase, Digital Performer, Audiosculpt</p>
+</div>
+<div class="w3-half"><p>Esperienze Professionali</p>
+</div>
+<div class="w3-half"><p>Co-Developer for "SYN" (interactive murble musical interface), Mario Coppola</p><p>Co-Developer for "TACTO" (interactive musical table), Officine Tesla</p><p>Music Producer for "The Mo'Joes" interactive Entertainment, Tallin
+</p><p>Developer, Livid instrument, Texas
+</p><p>Producer, Carosello Records, Milano
+</p><p>Musicista, Producer, Sound Engineering, SONY Italia, Rome
+</p><p>Sound Engineering, MAYBESIX, Varese
+</p><p>Video Game Composer, Milestone, Milano
+</p>
+</div>
+<div class="w3-half"><p>Attività associative</p>
+</div>
+<div class="w3-half"><p>Co-founder, Officine Tesla, Milano</p><p>Co-founder, Lucida Console, Milano</p><p>Co-founder, PC HUNTER, Lecco</p></div>
+<div class="w3-half">
+<p>Aree di interesse</p>
+</div>
+<div class="w3-half"><p>Composizione di musica elettronica, elettroacustica, programmazione strumenti meccanici, sistemi d'interazione uomo-macchina, liuteria elettromeccanica, sistemi generativi per la composizione assistita, nuove tecnologie</p></div>
+</div>
+</div>
+<div class="bgimg-2 w3-animate-opacity">
+<div class="w3-display-middle w3-animate-opacity" style="white-space:nowrap;">
+        <span class="w3-center w3-padding-xxlarge w3-wide w3-trasparent ">Projects
+</div>
+</div>
+<div class="slideshow">
+<div class="w3-row ">
+<div class="w3-half" >
+<div class="polaroid" >
+    <button class="btn-link video" data-video="https://www.youtube.com/embed/LVQDzDt8Z3k" data-toggle="modal" data-target="#videoModal">   
+<img src="Projects/Data1.svg" alt="norway" style="width:100%">
+</button>
+<div class="container">
+    <p>minusPLUS</p>
+    </div>
+  </div>
+</div>
+<div class="w3-half" >
+<div class="polaroid">
+    
+        <button class="btn-link video" data-video="https://www.youtube.com/embed/YbA0geIXmFA" data-toggle="modal" data-target="#videoModal">   
+<img src="Projects/data2.svg" alt="Norway" style="width:100%">
+            </button>
+        
+  <div class="container">
+    <p>Lucidaconsole</p>
+   </div>
+  </div>
+</div>
+<div class="w3-half">
+<div class="polaroid">
+    <button class="btn-link video" data-video="https://www.youtube.com/embed/YbA0geIXmFA" data-toggle="modal" data-target="#videoModal">   
+  <img src="Projects/data3.svg" alt="Norway" style="width:100%">
+  </button>
+        <div class="container">
+    <p>Lisa</p>
+   </div>
+  </div>
+</div>
+<div class="w3-half">
+<div class="polaroid">
+    <button class="btn-link video" data-video="https://www.youtube.com/embed/YbA0geIXmFA" data-toggle="modal" data-target="#videoModal">  
+  <img src="Projects/data4.svg" alt="Norway" style="width:100%">
+  </button>
+        <div class="container">
+    <p>Singing 3D printer</p>
+   </div>
+  </div>
+</div>
+<div class="w3-half">
+<div class="polaroid">
+    <button class="btn-link video" data-video="https://www.youtube.com/embed/YbA0geIXmFA" data-toggle="modal" data-target="#videoModal"> 
+  <img src="Projects/data5.svg" alt="Norway" style="width:100%">
+          </button>
+  <div class="container">
+    <p>Syn</p>
+   </div>
+  </div>
+</div>
+<div class="w3-half">
+<div class="polaroid">
+    <button class="btn-link video" data-video="https://www.youtube.com/embed/YbA0geIXmFA" data-toggle="modal" data-target="#videoModal">
+    
+  <img src="Projects/data6.svg" alt="Norway" style="width:100%">
+          </button>
+  <div class="container">
+    <p>Tacto</p>
+   </div>
+  </div>
+</div>
+<div class="w3-half">
+<div class="polaroid">
+    <button class="btn-link video" data-video="https://www.youtube.com/embed/YbA0geIXmFA" data-toggle="modal" data-target="#videoModal">
+  <img src="Projects/data7.svg" alt="Norway" style="width:100%">
+        </button>
+  <div class="container">
+    <p>Oversound</p>
+   </div>
+  </div>
+</div>
+<div class="w3-half">
+<div class="polaroid">
+    <button class="btn-link video" data-video="https://www.youtube.com/embed/YbA0geIXmFA" data-toggle="modal" data-target="#videoModal">
+  <img src="Projects/data8.svg" alt="Norway" style="width:100%">
+        </button>
+  <div class="container">
+    <p>T</p>
+   </div>
+  </div>
+</div>
+</div>
+</div>
+     
+    <div class="modal w3-animate-opacity" id="videoModal" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        
+    <div class="modal-dialog">
+        
+     
+        <div class="modal-body">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span> </button>
+            <div class="videowrapper">
+                <iframe width="" height="" src="" frameborder="0" allowfullscreen></iframe>
+            </div>
+           
+        </div>
+    
+    </div>
+    </div>
+    <div class="bgimg-3 w3-display-container"> </div>
+</body>
+
+</html>
