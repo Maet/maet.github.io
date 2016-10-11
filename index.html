@@ -14,7 +14,7 @@
         $(".video").click(function() {
             var theModal = $(this).data("target"),
                 videoSRC = $(this).attr("data-video"),
-                videoSRCauto = videoSRC + "?modestbranding=1&rel=0&controls=0&showinfo=0&html5=1&autoplay=1";
+                videoSRCauto = videoSRC + "?modestbranding=0&rel=0&controls=1&showinfo=0&html5=1&autoplay=1";
             $(theModal + ' iframe').attr('src', videoSRCauto);
             $(theModal + ' button.close').click(function() {
                 $(theModal + ' iframe').attr('src', videoSRC);
@@ -68,6 +68,7 @@
         margin: auto;
         height: 20%;
     }
+    
     .smallspace {
         margin: auto;
         height: 20px;
@@ -122,9 +123,10 @@
         float: none;
         clear: both;
         width: 100%;
+        height: 100%;
         position: relative;
-        padding-bottom: 56.25%;
-        padding-top: 25px;
+        padding-bottom: 25.25%;
+        padding-top: 300px;
         height: 0;
     }
     .videowrapper iframe {
@@ -139,6 +141,7 @@
 }
     .close {
         outline: none;
+       
     }
     body.modal-open {
         overflow: visible;
@@ -146,6 +149,11 @@
     .fadeInBlock {
         opacity: 0;
     }
+    
+    input:hover { 
+    opacity: 0.5;
+    filter: alpha(opacity=50);;
+}
    
     
     @media screen and (max-width: 1200px) {
@@ -426,7 +434,7 @@
         <div class="center2">
             <h5>Projects</h5> </div>
     </div>
-    <div class="mediumspace"> </div>
+    <div class="smallspace"> </div>
     <div class="slideshow">
         <div class="w3-row w3-padding-jumbo ">
             
@@ -440,40 +448,40 @@
                 <p>Lucidaconsole</p>
                 <div class="smallspace"> </div>
             </div>
-            <div class="w3-half fadeInBlock"> <input type="image" src="Projects/3.svg" width="30%">
+            <div class="w3-half fadeInBlock"> <input type="image" src="Projects/3.svg" width="30%" class="video" data-video="https://www.youtube.com/embed/hZGl7S5T4hY" data-toggle="modal" data-target="#videoModal">
                 <p>Lisa</p>
                 <div class="smallspace"> </div>
             </div>
-            <div class="w3-half fadeInBlock"> <input type="image" src="Projects/4.svg" width="30%">
+            <div class="w3-half fadeInBlock"> <input type="image" src="Projects/4.svg" width="30%" class="video" data-video="https://www.youtube.com/embed/Av7d1VuQg1M" data-toggle="modal" data-target="#videoModal">
                 <p>Singing 3D printer</p>
                 <div class="smallspace"> </div>
             </div>
-            <div class="w3-half fadeInBlock"> <input type="image" src="Projects/5.svg" width="30%">
+            <div class="w3-half fadeInBlock"> <input type="image" src="Projects/5.svg" width="30%" class="video" data-video="https://player.vimeo.com/video/163843683" data-toggle="modal" data-target="#videoModal">
                 <p>Syn</p>
                 <div class="smallspace"> </div>
             </div>
-            <div class="w3-half fadeInBlock"> <input type="image" src="Projects/6.svg" width="30%">
+            <div class="w3-half fadeInBlock"> <input type="image" src="Projects/6.svg" width="30%" class="video" data-video="https://player.vimeo.com/video/131434965" data-toggle="modal" data-target="#videoModal">
                 <p>Tacto</p>
                 <div class="smallspace"> </div>
             </div>
-            <div class="w3-half fadeInBlock"> <input type="image" src="Projects/7.svg" width="30%">
+            <div class="w3-half fadeInBlock"> <input type="image" src="Projects/7.svg" width="30%" class="video" data-video="https://www.youtube.com/embed/1GMZYjFJiK0" data-toggle="modal" data-target="#videoModal">
                 <p>Over</p>
                 <div class="smallspace"> </div>
             </div>
-            <div class="w3-half fadeInBlock"> <input type="image" src="Projects/8.svg" width="30%">
+            <div class="w3-half fadeInBlock"> <input type="image" src="Projects/8.svg" width="30%" class="video" data-video="https://www.youtube.com/embed/YbA0geIXmFA" data-toggle="modal" data-target="#videoModal">
                 <p>T</p>
                 <div class="smallspace"> </div>
             </div>
         </div>
     </div>
     
-    <div class="modal w3-animate-opacity" id="videoModal" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal" id="videoModal" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         
     <div class="modal-dialog">
         
      
-        <div class="modal-body">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span> </button>
+        <div class="modal-body w3-animate-opacity">
+          <button type="button " class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span> </button>
             <div class="videowrapper">
                 <iframe width="" height="" src="" frameborder="0" allowfullscreen></iframe>
             </div>
@@ -488,6 +496,5 @@
     </body>
     
     </html>
-        
         
         
