@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="css/modal.css">
 <script src="js/jquery.js"></script>
 <script src="js/modal.js"></script>
+    
 <script>
     $(function() {
         $(".video").click(function() {
@@ -23,6 +24,7 @@
     });
 </script>
 <style>
+    
     body,
     h5 {
         font-size: 1.6vw;
@@ -37,7 +39,10 @@
     p {
         font-size: 1.1vw;
         font-family: "Lato", sans-serif;
-    }
+        
+    
+    
+        }
     body,
     html {
         height: 100%;
@@ -51,19 +56,19 @@
     
    .space {
         margin: auto;
-        height: 25%;
+        height: 170px;
        
     }
     
     .smallspace {
         margin: auto;
-        height: 5%;
+        height: 20px;
        
     }
     
     .mediumspace {
         margin: auto;
-        height: 12.5%;
+        height: 40px;
        
     }
     
@@ -84,13 +89,46 @@
 }
     
     
-    .about {
+    .about1 {
         margin: auto;
         width: 50%;
         padding: 4%;
         text-align: left;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         
+    }
+    .about2 {
+        margin: auto;
+        width: 50%;
+        padding: 4%;
+        text-align: left;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        
+    }
+    .about3 {
+        margin: auto;
+        width: 50%;
+        padding: 4%;
+        text-align: left;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        
+    }
+    .about4 {
+        margin: auto;
+        width: 50%;
+        padding: 4%;
+        text-align: left;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        
+    }
+    .about5 {
+        margin: auto;
+        width: 50%;
+        padding: 4%;
+        text-align: left;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        
+  
     }
     .projects {
         margin: auto;
@@ -107,6 +145,15 @@
     }
     
         
+    .arrow {
+        margin: auto;
+        height:200px;
+        background-image: url('artworks/arrow.svg');
+        background-size: 2%;
+        background-position: top;
+        background-repeat: no-repeat;
+       
+    }
     
     .videowrapper {
         float: none;
@@ -139,24 +186,34 @@
     body.modal-open {
     overflow: visible;
 }
-   
+
+    .fadeInBlock {
+    opacity:0;
+}
+
     
 </style>
 
 <body>
     
+
     
-<div class="space">
+    
+    
+<div class="smallspace">
 </div>
-<div class="header w3-animate-opacity">
+<div class="header">
 <div class="center">
 <h5>Mattia Davide Amico</h5>
 <h4>Sonic Interaction Designer</h4>
 </div>
 </div>
-<div class="space">
-</div>
-<div class="about">
+<div class="mediumspace">
+</div>    
+ 
+ 
+    
+<div class="about1 fadeInBlock">
 <div class="w3-row ">
 <div class="w3-half"><p>Skills</p>
 </div>
@@ -164,9 +221,10 @@
 </div>
 </div>
 </div>
+</div>    
 <div class="smallspace">
 </div>
-<div class="about">
+<div class="about2 fadeInBlock">
 <div class="w3-row ">
 <div class="w3-half">
 <p>Software knowledge</p>
@@ -178,7 +236,7 @@
 </div>
 <div class="smallspace">
 </div>
-<div class="about">
+<div class="about3 fadeInBlock">
 <div class="w3-row ">
 <div class="w3-half">
 <p>Professional experience</p>
@@ -196,7 +254,7 @@
 </div>
 <div class="smallspace">
 </div>
-<div class="about">
+<div class="about4 fadeInBlock">
 <div class="w3-row ">
 <div class="w3-half">
 <p>Association activities</p>
@@ -208,26 +266,64 @@
 </div>
 <div class="smallspace">
 </div>
-<div class="about">
+<div class="about5 fadeInBlock">
 <div class="w3-row ">
 <div class="w3-half">
 <p>Areas of interest</p>
 </div>
 <div class="w3-half">
-<p>Interaction design, digital liuthery, electromecanic musical instruments, generative music, cognitive modelling, computer assisted music, new technologies, kinetic art, cymatics</p>
+<p>Interaction design, digital liuthery, electromecanic musical instruments, generative music, cognitive modelling, computer assisted music, new technologies, kinetic art, cymatics, sound</p>
 </div>
 </div>
 </div>
 <div class="mediumspace">
 </div>
-<div class="projects w3-animate-opacity">
+<div class="projects fadeInBlock">
 <div class="center">
 <h5>Projects</h5>
 </div>
-</div>    
+</div> 
+  
     
-        
+    
+
+
+
+    
+    
+
+    
 <body>
+    
+<script>
+    $(function() {
+    $(window).scroll( function(){
+    
+       
+        $('.fadeInBlock').each( function(i){
+            
+            var bottom_of_object = $(this).position().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            
+            /* Adjust the "200" to either have a delay or that the content starts fading a bit before you reach it  */
+            bottom_of_window = bottom_of_window + 1;  
+          
+            if( bottom_of_window > bottom_of_object ){
+                
+                $(this).animate({'opacity':'1'},600);
+                    
+            }  
+        }); 
+    
+    });
+});
+    
+</script>    
+
+    
+    
+    
+    
+    
 </html>
     
-   
