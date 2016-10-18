@@ -6,495 +6,509 @@
 <link rel="stylesheet" href="css/lato.css">
 <link rel="stylesheet" href="css/font.css">
 <link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/modal.css">
 <script src="js/jquery.js"></script>
-<script src="js/modal.js"></script>
 <script>
-    $(function() {
-        $(".video").click(function() {
-            var theModal = $(this).data("target"),
-                videoSRC = $(this).attr("data-video"),
-                videoSRCauto = videoSRC + "?modestbranding=0&rel=0&controls=1&showinfo=0&html5=1&autoplay=1";
-            $(theModal + ' iframe').attr('src', videoSRCauto);
-            $(theModal + ' button.close').click(function() {
-                $(theModal + ' iframe').attr('src', videoSRC);
-            });
+$(function() {
+    $(".video").click(function() {
+        videoSRC = $(this).attr("data-video"),
+            videoSRCauto = videoSRC + "?modestbranding=0&rel=0&controls=1&showinfo=0&html5=1&autoplay=0";
+        $(' iframe').attr('src', videoSRCauto);
+        $(' iframe').attr('src', videoSRC);
+    });
+});
+$(window).on("load", function() {
+    $(window).scroll(function() {
+        $(".fadeInBlock").each(function() {
+            /* Check the location of each desired element */
+            var objectBottom = $(this).offset().top + $(this).outerHeight();
+            var windowBottom = $(window).scrollTop() + $(window).innerHeight();
+            /* If the element is completely within bounds of the window, fade it in */
+            if(objectBottom < windowBottom) { //object comes into view (scrolling down)
+                if($(this).css("opacity") == 0) {
+                    $(this).fadeTo(500, 1);
+                }
+            } else { //object goes out of view (scrolling up)
+                if($(this).css("opacity") == 1) {
+                    $(this).fadeTo(500, 0);
+                }
+            }
         });
     });
+    $(window).scroll(); //invoke scroll-handler on page-load
+});
     
-    $(function() {
-                $(window).scroll(function() {
-                    $('.fadeInBlock').each(function(i) {
-                        var bottom_of_object = $(this).position().top + $(this).outerHeight();
-                        var bottom_of_window = $(window).scrollTop() + $(window).height();
-                        /* Adjust the "200" to either have a delay or that the content starts fading a bit before you reach it  */
-                        bottom_of_window = bottom_of_window + 1;
-                        if (bottom_of_window > bottom_of_object) {
-                            $(this).animate({
-                                'opacity': '1'
-                            }, 600);
-                        }
-                    });
-                });
-            });
+  
 </script>
-   
-
 <style>
-    body,
-    h5 {
-        font-size: 1.6vw;
-        font-family: "Lato", sans-serif;
-        text-align: center;
-    }
-    h4 {
-        font-size: 1.3vw;
-        font-family: "Lato", sans-serif;
-        text-align: center;
-    }
-    p {
-        font-size: 1.1vw;
-        font-family: "Lato", sans-serif;
-    }
-    body,
-    html {
-        height: 100%;
-        color: #000;
-        line-height: 1.8;
-    }
-    /* Create a Parallax Effect */
+body,
+h5 {
+    font-size: 1.6vw;
+    font-family: "Lato", sans-serif;
+}
+h4 {
+    font-size: 1.3vw;
+    font-family: "Lato", sans-serif;
+}
+p {
+    font-size: 1.1vw;
+    font-family: "Lato", sans-serif;
+}
+body,
+html {
+    height: 100%;
+    color: #000;
+    line-height: 1.8;
+}
+.space {
+    margin: auto;
+    height: 20%;
+}
+.smallspace {
+    margin: auto;
+    height: 20px;
+}
+.mediumspace {
+    margin: auto;
+    height: 40px;
+}
+.header {
+    margin: auto;
+    width: 50%;
+    background-image: url('artworks/artwork1.svg');
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.center {
+    padding: 22.6%;
+    text-align: center;
+}
+.left {
+    text-align: left;
+}
+.justify {
+    text-align: justify;
+}
+.center2 {
+    padding: 1%;
+    text-align: center;
+}
+.about {
+    margin: auto;
+    width: 50%;
+    padding: 4%;
+    text-align: left;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.projects {
+    margin: auto;
+    width: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.slideshow {
+    margin: auto;
+    width: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+}
+.arrow {
+    margin: auto;
+    height: 15%;
+    background-image: url('artworks/arrow.svg');
+    background-size: 5%;
+    background-position: top;
+    background-repeat: no-repeat;
     
-    .space {
-        margin: auto;
-        height: 20%;
-    }
-    
-    .smallspace {
-        margin: auto;
-        height: 20px;
-    }
-    .mediumspace {
-        margin: auto;
-        height: 40px;
-    }
-    .header {
-        margin: auto;
-        width: 50%;
-        background-image: url('artworks/artwork1.svg');
-        background-size: 100%;
-        background-position: center;
-        background-repeat: no-repeat;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    }
-    .center {
-        padding: 22.6%;
-        text-align: center;
-    }
-    .center2 {
-        padding: 1%;
-        text-align: center;
-    }
-    .about {
-        margin: auto;
-        width: 50%;
-        padding: 4%;
-        text-align: left;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    }
-    .projects {
-        margin: auto;
-        width: 50%;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    }
-    .slideshow {
-        margin: auto;
-        width: 50%;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    }
-    .arrow {
-        margin: auto;
-        height: 200px;
-        background-image: url('artworks/arrow.svg');
-        background-size: 2%;
-        background-position: top;
-        background-repeat: no-repeat;
-    }
-    .videowrapper {
-        float: none;
-        clear: both;
-        width: 100%;
-        height: 100%;
-        position: relative;
-        padding-bottom: 25.25%;
-        padding-top: 300px;
-        height: 0;
-    }
-    .videowrapper iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-    }
-    textarea:focus, input:focus{
+}
+textarea:focus,
+input:focus {
     outline: none;
 }
-    .close {
-        outline: none;
-       
-    }
-    body.modal-open {
-        overflow: visible;
-    }
-    .fadeInBlock {
-        opacity: 0;
-    }
-    
-    input:hover { 
-    opacity: 0.5;
-    filter: alpha(opacity=50);;
+.fadeInBlock {
+    opacity: 0;
 }
-   
-    
-    @media screen and (max-width: 1200px) {
-        .header {
-            margin: auto;
-            width: 55%;
-            background-image: url('artworks/artwork1.svg');
-            background-size: 100%;
-            background-position: center;
-            background-repeat: no-repeat;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        }
-        .about {
-            margin: auto;
-            width: 55%;
-            padding: 4%;
-            text-align: left;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        }
-        .projects {
-            margin: auto;
-            width: 55%;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        }
-        .slideshow {
-            margin: auto;
-            width: 55%;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        }
+input:hover {
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+.videoWrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    /* 16:9 */
+    padding-top: 0;
+    height: 0;
+}
+.videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+@media screen and (max-width: 1200px) {
+    .header {
+        width: 55%;
+    }
+    .about {
+        width: 55%;
+    }
+    .projects {
+        width: 55%;
+    }
+    .slideshow {
+        width: 55%;
+    }
+    .arrow {
+      ;
+        background-size: 6%;
     }
     @media screen and (max-width: 980px) {
-        body,
-        h5 {
+        body, h5 {
             font-size: 1.9vw;
-            font-family: "Lato", sans-serif;
-            text-align: center;
         }
         h4 {
             font-size: 1.6vw;
-            font-family: "Lato", sans-serif;
-            text-align: center;
         }
         p {
             font-size: 1.4vw;
-            font-family: "Lato", sans-serif;
         }
         .header {
-            margin: auto;
             width: 65%;
-            background-image: url('artworks/artwork1.svg');
-            background-size: 100%;
-            background-position: center;
-            background-repeat: no-repeat;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         }
         .about {
-            margin: auto;
             width: 65%;
-            padding: 4%;
-            text-align: left;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         }
         .projects {
-            margin: auto;
             width: 65%;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         }
         .slideshow {
-            margin: auto;
             width: 65%;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         }
-    }
-    @media screen and (max-width: 750px) {
-        body,
-        h5 {
-            font-size: 2.6vw;
-            font-family: "Lato", sans-serif;
-            text-align: center;
+        .arrow {
+            background-size: 7%;
         }
-        h4 {
-            font-size: 2.1vw;
-            font-family: "Lato", sans-serif;
-            text-align: center;
-        }
-        p {
-            font-size: 1.8vw;
-            font-family: "Lato", sans-serif;
-        }
-        .header {
-            margin: auto;
-            width: 80%;
-            background-image: url('artworks/artwork1.svg');
-            background-size: 100%;
-            background-position: center;
-            background-repeat: no-repeat;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        }
-        .about {
-            margin: auto;
-            width: 80%;
-            padding: 4%;
-            text-align: left;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        }
-        .projects {
-            margin: auto;
-            width: 80%;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        }
-        .slideshow {
-            margin: auto;
-            width: 80%;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        }
-    }
-    @media screen and (max-width: 540px) {
-        body,
-        h5 {
-            font-size: 3vw;
-            font-family: "Lato", sans-serif;
-            text-align: center;
-        }
-        h4 {
-            font-size: 2.5vw;
-            font-family: "Lato", sans-serif;
-            text-align: center;
-        }
-        p {
-            font-size: 2.2vw;
-            font-family: "Lato", sans-serif;
-        }
-        .header {
-            margin: auto;
-            width: 95%;
-            background-image: url('artworks/artwork1.svg');
-            background-size: 100%;
-            background-position: center;
-            background-repeat: no-repeat;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        }
-        .about {
-            margin: auto;
-            width: 95%;
-            padding: 4%;
-            text-align: left;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        }
-        .projects {
-            margin: auto;
-            width: 95%;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        }
-        .slideshow {
-            margin: auto;
-            width: 95%;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        }
-    }
-    @media screen and (max-width: 380px) {
-        body,
-        h5 {
-            font-size: 3.2vw;
-            font-family: "Lato", sans-serif;
-            text-align: center;
-        }
-        h4 {
-            font-size: 2.7vw;
-            font-family: "Lato", sans-serif;
-            text-align: center;
-        }
-        p {
-            font-size: 2.4vw;
-            font-family: "Lato", sans-serif;
-        }
-        .header {
-            margin: auto;
-            width: 100%;
-            background-image: url('artworks/artwork1.svg');
-            background-size: 100%;
-            background-position: center;
-            background-repeat: no-repeat;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        }
-        .about {
-            margin: auto;
-            width: 100%;
-            padding: 4%;
-            text-align: left;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        }
-        .projects {
-            margin: auto;
-            width: 100%;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        }
-        .slideshow {
-            margin: auto;
-            width: 100%;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        }
-    }
+        @media screen and (max-width: 750px) {
+            body, h5 {
+                font-size: 2.6vw;
+            }
+            h4 {
+                font-size: 2.1vw;
+            }
+            p {
+                font-size: 1.8vw;
+            }
+            .header {
+                width: 80%;
+            }
+            .about {
+                width: 80%;
+            }
+            .projects {
+                width: 80%;
+            }
+            .slideshow {
+                width: 80%;
+            }
+            .arrow {
+                background-size: 8%;
+            }
+            @media screen and (max-width: 540px) {
+                body, h5 {
+                    font-size: 3.3vw;
+                }
+                h4 {
+                    font-size: 2.8vw;
+                }
+                p {
+                    font-size: 2.4vw;
+                }
+                .header {
+                    margin: auto;
+                    width: 95%;
+                }
+                .about {
+                    width: 95%;
+                    text-align: center;
+                }
+                .projects {
+                    width: 95%;
+                }
+                .slideshow {
+                    width: 95%;
+                }
+                .arrow {
+                    height: 35%;
+                    background-size: 9%;
+                }
+                @media screen and (max-width: 380px) {
+                    body, h5 {
+                        font-size: 3.5vw;
+                    }
+                    h4 {
+                        font-size: 3vw;
+                    }
+                    p {
+                        font-size: 2.6vw;
+                    }
+                    .header {
+                        width: 100%;
+                    }
+                    .about {
+                        width: 100%;
+                        text-align: center;
+                    }
+                    .projects {
+                        width: 100%;
+                    }
+                    .slideshow {
+                        width: 100%;
+                    }
+                    .arrow {
+                        height: 35%;
+                        background-size: 10%;
+                    }
 </style>
-
 <body>
-    <div class="space"> </div>
-    <div class="header w3-animate-opacity">
-        <div class="center">
-            <h5>Mattia Davide Amico</h5>
-            <h4>Sonic Interaction Designer</h4> </div>
-    </div>
-    <div class="mediumspace"> </div>
-    <div class="about fadeInBlock">
-        <div class="w3-row ">
-            <div class="w3-half">
-                <p>Skills</p>
-            </div>
-            <div class="w3-half">
-                <p>Audio signal processing, Acoustic, Psicoacoustic, Electroacoustic, Realtime generative A/V processing, Sound Design, Sound Technologies</p>
-            </div>
-        </div>
-    </div>
-    <div class="smallspace"> </div>
-    <div class="about fadeInBlock">
-        <div class="w3-row ">
-            <div class="w3-half">
-                <p>Software knowledge</p>
-            </div>
-            <div class="w3-half">
-                <p>Max/Msp, Pure Data, C-Sound, Ableton, Coge, Renoise, Logic, Pro Tools, Reason, Resolume, Cell Dna, Adobe Audition, Cubase, Digital Performer, Audiosculpt</p>
-            </div>
-        </div>
-    </div>
-    <div class="smallspace"> </div>
-    <div class="about fadeInBlock">
-        <div class="w3-row ">
-            <div class="w3-half">
-                <p>Professional experience</p>
-            </div>
-            <div class="w3-half">
-                <p>Co-Developer for "SYN" (interactive murble musical interface), Mario Coppola</p>
-                <p>Co-Developer for "TACTO" (interactive musical table), Officine Tesla</p>
-                <p>Music Producer for "The Mo'Joes" interactive Entertainment, Tallin </p>
-                <p>Developer, Livid instrument, Texas </p>
-                <p>Producer, Carosello Records, Milano </p>
-                <p>Musician, Producer, Sound Engineering, SONY Italia, Rome </p>
-                <p>Sound Engineering, MAYBESIX, Varese </p>
-                <p>Video Game Composer, Milestone, Milano </p>
-            </div>
-        </div>
-    </div>
-    <div class="smallspace"> </div>
-    <div class="about fadeInBlock">
-        <div class="w3-row ">
-            <div class="w3-half">
-                <p>Association activities</p>
-            </div>
-            <div class="w3-half">
-                <p>Co-founder, Officine Tesla, Milano</p>
-                <p>Co-founder, Lucida Console, Milano</p>
-                <p>Co-founder, PC HUNTER, Lecco</p>
-            </div>
-        </div>
-    </div>
-    <div class="smallspace"> </div>
-    <div class="about fadeInBlock">
-        <div class="w3-row ">
-            <div class="w3-half">
-                <p>Areas of interest</p>
-            </div>
-            <div class="w3-half">
-                <p>Interaction design, digital liuthery, electromecanic musical instruments, generative music, cognitive modelling, computer assisted music, new technologies, kinetic art, cymatics, sound</p>
-            </div>
-        </div>
-    </div>
-    <div class="mediumspace"> </div>
-    <div class="projects fadeInBlock">
-        <div class="center2">
-            <h5>Projects</h5> </div>
-    </div>
-    <div class="smallspace"> </div>
-    <div class="slideshow">
-        <div class="w3-row w3-padding-jumbo ">
-            
-            <div class="w3-half fadeInBlock">
-                 <input type="image" src="Projects/1.svg" width="30%" class="video" data-video="https://www.youtube.com/embed/LVQDzDt8Z3k" data-toggle="modal" data-target="#videoModal">
-                   
-                <p>minusPLUS</p>
-                <div class="smallspace"> </div>
-            </div>
-            <div class="w3-half fadeInBlock"> <input type="image" src="Projects/2.svg" width="30%" class="video" data-video="https://www.youtube.com/embed/YbA0geIXmFA" data-toggle="modal" data-target="#videoModal">
-                <p>Lucidaconsole</p>
-                <div class="smallspace"> </div>
-            </div>
-            <div class="w3-half fadeInBlock"> <input type="image" src="Projects/3.svg" width="30%" class="video" data-video="https://www.youtube.com/embed/hZGl7S5T4hY" data-toggle="modal" data-target="#videoModal">
-                <p>Lisa</p>
-                <div class="smallspace"> </div>
-            </div>
-            <div class="w3-half fadeInBlock"> <input type="image" src="Projects/4.svg" width="30%" class="video" data-video="https://www.youtube.com/embed/Av7d1VuQg1M" data-toggle="modal" data-target="#videoModal">
-                <p>Singing 3D printer</p>
-                <div class="smallspace"> </div>
-            </div>
-            <div class="w3-half fadeInBlock"> <input type="image" src="Projects/5.svg" width="30%" class="video" data-video="https://player.vimeo.com/video/163843683" data-toggle="modal" data-target="#videoModal">
-                <p>Syn</p>
-                <div class="smallspace"> </div>
-            </div>
-            <div class="w3-half fadeInBlock"> <input type="image" src="Projects/6.svg" width="30%" class="video" data-video="https://player.vimeo.com/video/131434965" data-toggle="modal" data-target="#videoModal">
-                <p>Tacto</p>
-                <div class="smallspace"> </div>
-            </div>
-            <div class="w3-half fadeInBlock"> <input type="image" src="Projects/7.svg" width="30%" class="video" data-video="https://www.youtube.com/embed/1GMZYjFJiK0" data-toggle="modal" data-target="#videoModal">
-                <p>Over</p>
-                <div class="smallspace"> </div>
-            </div>
-            <div class="w3-half fadeInBlock"> <input type="image" src="Projects/8.svg" width="30%" class="video" data-video="https://www.youtube.com/embed/YbA0geIXmFA" data-toggle="modal" data-target="#videoModal">
-                <p>T</p>
-                <div class="smallspace"> </div>
-            </div>
-        </div>
-    </div>
+<div class="space">
+</div>
+<div class="header w3-animate-opacity">
+	<div class="center">
+		<h5>Mattia Davide Amico</h5>
+		<h4>Sonic Interaction Designer</h4>
+	</div>
+</div>
     
-    <div class="modal" id="videoModal" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="arrow w3-animate-fading">
+</div>
         
-    <div class="modal-dialog">
-        
+<div class="mediumspace">
+</div>     
+<div class="projects fadeInBlock">
+	<div class="center2">
+		<h5>Projects</h5>
+	</div>
+</div>
+<div class="smallspace init">
+</div>
+<div id="Paris" class="tabcontent w3-animate-opacity ">
+  <div class="projects w3-center"><h4 class="w3-padding">MinusPlus - Interactive audio intallation</h4><div class="w3-center"><div class="videoWrapper"><iframe width="" height="" src="" frameborder="0" allowfullscreen></iframe></div></div><div class="mediumspace">
+</div><div class="w3-center "><h4>Scheda Tecnica</h4></div><div class="justify w3-padding-xlarge"><p>2 moog Theremin Etherwave</p><p>Scheda audio rme fireface uc</p><p>Applicazione custom sviluppata in MaxMsp per la conversione della variazione di voltaggio in GM</p><p>Ableton live</p><p>macbook pro</p> <p>coppia monitor Adam A7X</p><div class="smallspace"> </div></div><div class="w3-center "><h4>Funzionamento</h4></div><div class="justify w3-padding-xlarge "><p>I Theremin posizionati ad una distanza calibrata producono un campo di risonanza elettromagnetica entro il quale le variazioni di prossimità di oggetti e/o persone producono un fenomeno di distorsione del segnale codificato in linguaggio midi standard. Il processo viene gestito da un software dedicato sviluppato in MaxMsp che permette una precisa mappatura sonora dell’area di interazione, mentre Il suono viene generato in tempo reale da una catena di processi di sintesi con parametri dinamici che rispondono linearmente alle variazioni del campo.</p><a href="javascript:void(0)" class="tablinks back video" onclick="openCity(event, 'London')" id="defaultOpen" data-video=""><div class="w3-center">back</div></a></div></div>
+</div> 
+ <a href="javascript:void(0)" class="tablinks start" onclick="openCity(event, 'London')" id="defaultOpen"></a>    
+<div class="slideshow tabcontent" id="London">
      
-        <div class="modal-body w3-animate-opacity">
-          <button type="button " class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span> </button>
-            <div class="videowrapper">
-                <iframe width="" height="" src="" frameborder="0" allowfullscreen></iframe>
-            </div>
-           
-        </div>
-    
-    </div>
-    </div>
-    
-    
+	<div class="w3-row w3-padding-jumbo ">
+		<div class="w3-half fadeInBlock">
+            
+        
+    <input type="image" src="Projects/1.svg" width="30%" class="video tablinks" data-video="https://www.youtube.com/embed/LVQDzDt8Z3k" onclick="openCity(event, 'Paris')" href="javascript:void(0)">
+    <p>minusPLUS</p>
+                <div class="smallspace"> </div>        
+       </div> 
+        <div class="w3-half fadeInBlock">
+    <input type="image" src="Projects/2.svg" width="30%" class="video tablinks" data-video="https://www.youtube.com/embed/YbA0geIXmFA" onclick="openCity(event, 'Paris')" href="javascript:void(0)">
+            <p>minusPLUS</p>
+                <div class="smallspace"> </div> 
+            </div> 
+    <div class="w3-half fadeInBlock">
+    <input type="image" src="Projects/3.svg" width="30%" class="video tablinks" data-video="https://www.youtube.com/embed/hZGl7S5T4hY" onclick="openCity(event, 'Paris')" href="javascript:void(0)"> 
+        <p>minusPLUS</p>
+                <div class="smallspace"> </div> 
+        </div> 
+    <div class="w3-half fadeInBlock">
+    <input type="image" src="Projects/4.svg" width="30%" class="video tablinks" data-video="https://www.youtube.com/embed/Av7d1VuQg1M" onclick="openCity(event, 'Paris')" href="javascript:void(0)"> 
+        <p>minusPLUS</p>
+                <div class="smallspace"> </div> 
+        </div> 
+       <div class="w3-half fadeInBlock">     
+    <input type="image" src="Projects/5.svg" width="30%" class="video tablinks" data-video="https://player.vimeo.com/video/163843683" onclick="openCity(event, 'Paris')" href="javascript:void(0)"> 
+           <p>minusPLUS</p>
+                <div class="smallspace"> </div> 
+           </div> 
+        <div class="w3-half fadeInBlock">    
+    <input type="image" src="Projects/6.svg" width="30%" class="video tablinks" data-video="https://player.vimeo.com/video/131434965" onclick="openCity(event, 'Paris')" href="javascript:void(0)"> 
+            <p>minusPLUS</p>
+                <div class="smallspace"> </div> 
+            </div> 
+      <div class="w3-half fadeInBlock">      
+    <input type="image" src="Projects/7.svg" width="30%" class="video tablinks" data-video="https://www.youtube.com/embed/1GMZYjFJiK0" onclick="openCity(event, 'Paris')" href="javascript:void(0)"> 
+          <p>minusPLUS</p>
+                <div class="smallspace"> </div> 
+          </div> 
+       <div class="w3-half fadeInBlock">     
+    <input type="image" src="Projects/8.svg" width="30%" class="video tablinks" data-video="https://www.youtube.com/embed/YbA0geIXmFA" onclick="openCity(event, 'Paris')" href="javascript:void(0)">
+           <p>minusPLUS</p>
+                <div class="smallspace"> </div> 
+           </div> 
+       
+        
 
-    </body>
+
+        
+        
     
-    </html>
         
         
+
+        
+        
+</div>
+
+
+
+<script>
+function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+			
+		</div>
+    
+	
+  <div class="mediumspace">
+</div> 
+<div class="about fadeInBlock">
+	<div class="w3-row ">
+		<div class="w3-half">
+			<p>
+				 Skills
+			</p>
+		</div>
+		<div class="w3-half">
+			<p>
+				 Audio signal processing, Acoustic, Psicoacoustic, Electroacoustic, Realtime generative A/V processing, Sound Design, Sound Technologies
+			</p>
+		</div>
+	</div>
+</div>
+<div class="smallspace">
+</div>
+<div class="about fadeInBlock">
+	<div class="w3-row">
+		<div class="w3-half">
+			<p>
+				 Software knowledge
+			</p>
+		</div>
+		<div class="w3-half">
+			<p>
+				 Max/Msp, Pure Data, C-Sound, Ableton, Coge, Renoise, Logic, Pro Tools, Reason, Resolume, Cell Dna, Adobe Audition, Cubase, Digital Performer, Audiosculpt
+			</p>
+		</div>
+	</div>
+</div>
+<div class="smallspace">
+</div>
+<div class="about fadeInBlock">
+	<div class="w3-row ">
+		<div class="w3-half">
+			<p>
+				 Professional experience
+			</p>
+		</div>
+		<div class="w3-half">
+			<p>
+				 Co-Developer for "SYN" (interactive murble musical interface), Mario Coppola
+			</p>
+			<p>
+				 Co-Developer for "TACTO" (interactive musical table), Officine Tesla
+			</p>
+			<p>
+				 Music Producer for "The Mo'Joes" interactive Entertainment, Tallin
+			</p>
+			<p>
+				 Developer, Livid instrument, Texas
+			</p>
+			<p>
+				 Producer, Carosello Records, Milano
+			</p>
+			<p>
+				 Musician, Producer, Sound Engineering, SONY Italia, Rome
+			</p>
+			<p>
+				 Sound Engineering, MAYBESIX, Varese
+			</p>
+			<p>
+				 Video Game Composer, Milestone, Milano
+			</p>
+		</div>
+	</div>
+</div>
+<div class="smallspace">
+</div>
+<div class="about fadeInBlock">
+	<div class="w3-row ">
+		<div class="w3-half">
+			<p>
+				 Association activities
+			</p>
+		</div>
+		<div class="w3-half">
+			<p>
+				 Co-founder, Officine Tesla, Milano
+			</p>
+			<p>
+				 Co-founder, Lucida Console, Lecco
+			</p>
+			<p>
+				 Co-founder, PC HUNTER, Lecco
+			</p>
+		</div>
+	</div>
+</div>
+<div class="smallspace">
+</div>
+<div class="about fadeInBlock">
+	<div class="w3-row ">
+		<div class="w3-half">
+			<p>
+				 Areas of interest
+			</p>
+		</div>
+		<div class="w3-half">
+			<p>
+				 Interaction design, digital liuthery, electromecanic musical instruments, generative music, cognitive modelling, computer assisted music, new technologies, kinetic art, cymatics, sound phenomena
+			</p>
+		</div>
+	</div>
+</div>
+
+
+<script>
+    $(".back").click(function() {
+    $('html,body').animate({
+        scrollTop: $(".start").offset().top},
+        'slow');
+});
+    
+    $(".video").click(function() {
+    $('html,body').animate({
+        scrollTop: $(".init").offset().top},
+        'slow');
+});
+    
+   
+    
+    
+    
+    </script>
+    
+    
+</body>
+</html>
