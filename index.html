@@ -25,11 +25,11 @@ $(window).on("load", function() {
             /* If the element is completely within bounds of the window, fade it in */
             if(objectBottom < windowBottom) { //object comes into view (scrolling down)
                 if($(this).css("opacity") == 0) {
-                    $(this).fadeTo(500, 1);
+                    $(this).fadeTo(300, 1);
                 }
             } else { //object goes out of view (scrolling up)
                 if($(this).css("opacity") == 1) {
-                    $(this).fadeTo(500, 0);
+                    $(this).fadeTo(300, 0);
                 }
             }
         });
@@ -73,9 +73,18 @@ html {
 }
 .header {
     margin: auto;
-    width: 50%;
+    width: 45%;
     background-image: url('artworks/artwork1.svg');
     background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+    .contact {
+    margin: auto;
+    width: 45%;
+    background-image: url('artworks/artwork3.svg');
+    background-size: 85%;
     background-position: center;
     background-repeat: no-repeat;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -89,6 +98,7 @@ html {
 }
 .justify {
     text-align: justify;
+    
 }
 .center2 {
     padding: 1%;
@@ -96,29 +106,28 @@ html {
 }
 .about {
     margin: auto;
-    width: 50%;
+    width: 45%;
     padding: 4%;
     text-align: left;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .projects {
     margin: auto;
-    width: 50%;
+    width: 45%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .slideshow {
     margin: auto;
-    width: 50%;
+    width: 45%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     text-align: center;
 }
 .arrow {
-    margin: auto;
-    height: 35%;
-    background-image: url('artworks/arrow.svg');
-    background-size: 5%;
-    background-position: top;
-    background-repeat: no-repeat;
+ width: 5%;
+    
+ 
+    
+   
     
 }
 textarea:focus,
@@ -152,6 +161,9 @@ input:hover {
     .header {
         width: 55%;
     }
+    .contact {
+     width: 55%;
+    }    
     .about {
         width: 55%;
     }
@@ -162,8 +174,7 @@ input:hover {
         width: 55%;
     }
     .arrow {
-      ;
-        background-size: 6%;
+      width: 6%;
     }
     @media screen and (max-width: 980px) {
         body, h5 {
@@ -178,6 +189,10 @@ input:hover {
         .header {
             width: 65%;
         }
+        
+         .contact {
+     width: 65%;
+    }    
         .about {
             width: 65%;
         }
@@ -203,6 +218,9 @@ input:hover {
             .header {
                 width: 80%;
             }
+             .contact {
+     width: 80%;
+    }    
             .about {
                 width: 80%;
             }
@@ -213,7 +231,7 @@ input:hover {
                 width: 80%;
             }
             .arrow {
-                background-size: 8%;
+                width: 8%;
             }
             @media screen and (max-width: 540px) {
                 body, h5 {
@@ -226,12 +244,16 @@ input:hover {
                     font-size: 2.4vw;
                 }
                 .header {
-                    margin: auto;
+                    
                     width: 95%;
                 }
+                
+                 .contact {
+     width: 95%;
+    }    
                 .about {
                     width: 95%;
-                    text-align: center;
+                   
                 }
                 .projects {
                     width: 95%;
@@ -240,7 +262,7 @@ input:hover {
                     width: 95%;
                 }
                 .arrow {
-                    background-size: 9%;
+                    width: 9%;
                 }
                 @media screen and (max-width: 380px) {
                     body, h5 {
@@ -255,9 +277,13 @@ input:hover {
                     .header {
                         width: 100%;
                     }
+                    
+                     .contact {
+     width: 100%;
+    }    
                     .about {
                         width: 100%;
-                        text-align: center;
+                        
                     }
                     .projects {
                         width: 100%;
@@ -266,7 +292,8 @@ input:hover {
                         width: 100%;
                     }
                     .arrow {
-                        background-size: 10%;
+                        
+                       width: 10%;
                     }
 </style>
 <body>
@@ -278,11 +305,14 @@ input:hover {
 		<h4>Sonic Interaction Designer</h4>
 	</div>
 </div>
-    
-<div class="arrow w3-animate-fading">
-</div>
+<div class="w3-center">
+<input type="image" src="artworks/arrow.svg" class="arrow w3-animate-fading">
+</div>    
+
+
+
         
-<div class="mediumspace">
+<div class="space">
 </div>
     
 <div class="projects fadeInBlock">
@@ -292,9 +322,9 @@ input:hover {
 </div>
 <div class="smallspace init">
 </div>
-<div id="Paris" class="tabcontent w3-animate-opacity ">
-  <div class="projects w3-center"><h4 class="w3-padding">MinusPlus - Interactive audio intallation</h4><div class="w3-center"><div class="videoWrapper"><iframe width="" height="" src="" frameborder="0" allowfullscreen></iframe></div></div><div class="mediumspace">
-</div><div class="w3-center "><h4>Scheda Tecnica</h4></div><div class="justify w3-padding-xlarge"><p>2 moog Theremin Etherwave</p><p>Scheda audio rme fireface uc</p><p>Applicazione custom sviluppata in MaxMsp per la conversione della variazione di voltaggio in GM</p><p>Ableton live</p><p>macbook pro</p> <p>coppia monitor Adam A7X</p><div class="smallspace"> </div></div><div class="w3-center "><h4>Funzionamento</h4></div><div class="justify w3-padding-xlarge "><p>I Theremin posizionati ad una distanza calibrata producono un campo di risonanza elettromagnetica entro il quale le variazioni di prossimità di oggetti e/o persone producono un fenomeno di distorsione del segnale codificato in linguaggio midi standard. Il processo viene gestito da un software dedicato sviluppato in MaxMsp che permette una precisa mappatura sonora dell’area di interazione, mentre Il suono viene generato in tempo reale da una catena di processi di sintesi con parametri dinamici che rispondono linearmente alle variazioni del campo.</p><a href="javascript:void(0)" class="tablinks back video" onclick="openCity(event, 'London')" id="defaultOpen" data-video=""><div class="w3-center">back</div></a></div></div>
+<div id="Paris" class="tabcontent">
+  <div class="projects w3-center w3-animate-opacity "><h4 class="w3-padding">MinusPlus - Interactive audio intallation</h4><div class="w3-center"><div class="videoWrapper"><iframe width="" height="" src="" frameborder="0" allowfullscreen></iframe></div></div><div class="mediumspace">
+</div><div class="w3-center "><h4>Scheda Tecnica</h4></div><div class="justify w3-padding-xlarge"><p>2 moog Theremin Etherwave</p><p>Scheda audio rme fireface uc</p><p>Applicazione custom sviluppata in MaxMsp per la conversione della variazione di voltaggio in GM</p><p>Ableton live</p><p>macbook pro</p> <p>coppia monitor Adam A7X</p><div class="smallspace"> </div></div><div class="w3-center "><h4>Funzionamento</h4></div><div class="justify w3-padding-xlarge "><p>I Theremin posizionati ad una distanza calibrata producono un campo di risonanza elettromagnetica entro il quale le variazioni di prossimità di oggetti e/o persone producono un fenomeno di distorsione del segnale codificato in linguaggio midi standard. Il processo viene gestito da un software dedicato sviluppato in MaxMsp che permette una precisa mappatura sonora dell’area di interazione, mentre Il suono viene generato in tempo reale da una catena di processi di sintesi con parametri dinamici che rispondono linearmente alle variazioni del campo.</p><a href="javascript:void(0)" class="tablinks back video" onclick="openCity(event, 'London')" id="defaultOpen" data-video=""><div class="w3-center"><img src="artworks/back.svg" width="10%"></div></a></div></div>
 </div> 
  <a href="javascript:void(0)" class="tablinks start" onclick="openCity(event, 'London')" id="defaultOpen"></a>    
 <div class="slideshow tabcontent " id="London">
@@ -342,19 +372,13 @@ input:hover {
            <p>minusPLUS</p>
                 <div class="smallspace"> </div> 
            </div> 
-       
-        
-
-
-        
-        
+    </div>
     
-        
-        
-
-        
-        
-</div>
+    
+    
+    
+    
+    
 
 
 
@@ -391,7 +415,7 @@ document.getElementById("defaultOpen").click();
 		</div>
 		<div class="w3-half">
 			<p>
-				 Audio signal processing, Acoustic, Psicoacoustic, Electroacoustic, Realtime generative A/V processing, Sound Design, Sound Technologies
+				 Audio signal processing, Acoustic, Psicoacoustic, Electroacoustic, generative A/V processing, Sound Design, Sound Technologies
 			</p>
 		</div>
 	</div>
@@ -422,29 +446,21 @@ document.getElementById("defaultOpen").click();
 			</p>
 		</div>
 		<div class="w3-half">
-			<p>
-				 Co-Developer for "SYN" (interactive murble musical interface), Mario Coppola
+			<p>Co-Developer for "SYN" (interactive murble musical interface), Mario Coppola
 			</p>
-			<p>
-				 Co-Developer for "TACTO" (interactive musical table), Officine Tesla
+			<p>Co-Developer for "TACTO" (interactive musical table), Officine Tesla
 			</p>
-			<p>
-				 Music Producer for "The Mo'Joes" interactive Entertainment, Tallin
+			<p>Music Producer for "The Mo'Joes" interactive Entertainment, Tallin
 			</p>
-			<p>
-				 Developer, Livid instrument, Texas
+			<p>Developer, Livid instrument, Texas
 			</p>
-			<p>
-				 Producer, Carosello Records, Milano
+			<p>Producer, Carosello Records, Milano
 			</p>
-			<p>
-				 Musician, Producer, Sound Engineering, SONY Italia, Rome
+			<p>Musician, Producer, Sound Engineering, SONY Italia, Rome
 			</p>
-			<p>
-				 Sound Engineering, MAYBESIX, Varese
+			<p>Sound Engineering, MAYBESIX, Varese
 			</p>
-			<p>
-				 Video Game Composer, Milestone, Milano
+			<p>Video Game Composer, Milestone, Milano
 			</p>
 		</div>
 	</div>
@@ -488,6 +504,20 @@ document.getElementById("defaultOpen").click();
 	</div>
 </div>
 
+    
+    
+    
+ <div class="mediumspace">
+</div>
+<div class="contact fadeInBlock">
+	<div class="center">
+		
+		
+	</div>
+</div>   
+    
+    
+    
 
 <script>
     $(".back").click(function() {
@@ -498,10 +528,14 @@ document.getElementById("defaultOpen").click();
     
     $(".video").click(function() {
     $('html,body').animate({
-        scrollTop: $(".init").offset().top},
+        scrollTop: $(".projects").offset().top},
         'slow');
 });
-    
+     $(".arrow").click(function() {
+    $('html,body').animate({
+        scrollTop: $(".projects").offset().top},
+        'slow');
+});
    
     
     
