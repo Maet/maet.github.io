@@ -8,573 +8,698 @@
 <link rel="stylesheet" href="css/style.css">
 <script src="js/jquery.js"></script>
 <script>
-$(function() {
-    $(".video").click(function() {
-        videoSRC = $(this).attr("data-video"),
-            videoSRCauto = videoSRC + "?modestbranding=0&rel=0&controls=1&showinfo=0&html5=1&autoplay=0";
-        $(' iframe').attr('src', videoSRCauto);
-        $(' iframe').attr('src', videoSRC);
-    });
-});
-$(window).on("load", function() {
-    $(window).scroll(function() {
-        $(".fadeInBlock").each(function() {
-            var objectBottom = $(this).offset().top + $(this).outerHeight();
-            var windowBottom = $(window).scrollTop() + $(window).innerHeight();
-            if(objectBottom < windowBottom) { 
-                if($(this).css("opacity") == 0) {
-                    $(this).fadeTo(300, 1);
-                }
-            } else { 
-                if($(this).css("opacity") == 1) {
-                    $(this).fadeTo(300, 0);
-                }
-            }
+    $(function() {
+        $(".video").click(function() {
+            videoSRC = $(this).attr("data-video"),
+                videoSRCauto = videoSRC + "?modestbranding=0&rel=0&controls=1&showinfo=0&html5=1&autoplay=0";
+            $(' iframe').attr('src', videoSRCauto);
+            $(' iframe').attr('src', videoSRC);
         });
     });
-    $(window).scroll(); //invoke scroll-handler on page-load
-});
+    $(window).on("load", function() {
+        $(window).scroll(function() {
+            $(".fadeInBlock").each(function() {
+                var objectBottom = $(this).offset().top + $(this).outerHeight();
+                var windowBottom = $(window).scrollTop() + $(window).innerHeight();
+                if (objectBottom < windowBottom) {
+                    if ($(this).css("opacity") == 0) {
+                        $(this).fadeTo(300, 1);
+                    }
+                } else {
+                    if ($(this).css("opacity") == 1) {
+                        $(this).fadeTo(300, 0);
+                    }
+                }
+            });
+        });
+        $(window).scroll();
+    });
 </script>
 <style>
-body,
-h5 {
-    font-size: 1.6vw;
-    font-family: "Lato", sans-serif;
-}
-h4 {
-    font-size: 1.3vw;
-    font-family: "Lato", sans-serif;
-}
-p {
-    font-size: 1.1vw;
-    font-family: "Lato", sans-serif;
-}
-body,
-html {
-    height: 1000px;
-    color: #000;
-    line-height: 1.8;
-}
-.space {
-    margin: auto;
-    height: 20%;
-}
-.smallspace {
-    margin: auto;
-    height: 20px;
-}
-.mediumspace {
-    margin: auto;
-    height: 40px;
-}
-.header {
-    margin: auto;
-    width: 45%;
-    background-image: url('artworks/artwork1.svg');
-    background-size: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-    .contact {
-    margin: auto;
-    width: 45%;
-    background-image: url('artworks/artwork3.svg');
-    background-size: 85%;
-    background-position: center;
-    background-repeat: no-repeat;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-.center {
-    padding: 22.6%;
-    text-align: center;
-}
-.left {
-    text-align: left;
-}
-.justify {
-    text-align: justify;
-}
-.center2 {
-    padding: 1%;
-    text-align: center;
-}
-.about {
-    margin: auto;
-    width: 45%;
-    padding: 4%;
-    text-align: left;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-.projects {
-    margin: auto;
-    width: 45%;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-.slideshow {
-    margin: auto;
-    width: 45%;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    text-align: center;
-}
-.arrow {
- width: 5%;
-}
-textarea:focus,
-input:focus {
-    outline: none;
-}
-.fadeInBlock {
-    opacity: 0;
-}
-input:hover {
-    opacity: 0.5;
-    filter: alpha(opacity=50);
-}
-.videoWrapper {
-    position: relative;
-    padding-bottom: 56.25%;
-    /* 16:9 */
-    padding-top: 0;
-    height: 0;
-}
-.videoWrapper iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}    
-iframe{
-    border-width: 0px;    
-}
-@media screen and (max-width: 1200px) {
+    body,
+    h5 {
+        font-size: 1.6vw;
+        font-family: "Lato", sans-serif;
+    }
+    h4 {
+        font-size: 1.3vw;
+        font-family: "Lato", sans-serif;
+    }
+    p {
+        font-size: 1.1vw;
+        font-family: "Lato", sans-serif;
+    }
+    body,
+    html {
+        height: 1000px;
+        color: #000;
+        line-height: 1.8;
+    }
+    .space {
+        margin: auto;
+        height: 20%;
+    }
+    .smallspace {
+        margin: auto;
+        height: 20px;
+    }
+    .mediumspace {
+        margin: auto;
+        height: 40px;
+    }
+    .bottomspace {
+        margin: auto;
+        height: 10%;
+    }
     .header {
-        width: 55%;
+        margin: auto;
+        width: 45%;
+        background-image: url('artworks/artwork1.svg');
+        background-size: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
     .contact {
-     width: 55%;
-    }    
+        margin: auto;
+        width: 45%;
+        background-image: url('artworks/artwork3.svg');
+        background-size: 85%;
+        background-position: center;
+        background-repeat: no-repeat;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    .center {
+        padding: 22.6%;
+        text-align: center;
+    }
+    .left {
+        text-align: left;
+    }
+    .justify {
+        text-align: justify;
+    }
+    .center2 {
+        padding: 1%;
+        text-align: center;
+    }
     .about {
-        width: 55%;
+        margin: auto;
+        width: 45%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    .id {
+        margin: auto;
+        width: 45%;
     }
     .projects {
-        width: 55%;
+        margin: auto;
+        width: 45%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
     .slideshow {
-        width: 55%;
+        margin: auto;
+        width: 45%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        text-align: center;
     }
     .arrow {
-      width: 6%;
+        width: 5%;
     }
-    @media screen and (max-width: 980px) {
-        body, h5 {
-            font-size: 1.9vw;
-        }
-        h4 {
-            font-size: 1.6vw;
-        }
-        p {
-            font-size: 1.4vw;
-        }
+    textarea:focus,
+    input:focus {
+        outline: none;
+    }
+    .fadeInBlock {
+        opacity: 0;
+    }
+    a:hover {
+        opacity: 0.5;
+        filter: alpha(opacity=50);
+    }
+    .videoWrapper {
+        position: relative;
+        padding-bottom: 56.25%;
+        padding-top: 0;
+        height: 0;
+    }
+    .videoWrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    iframe {
+        border-width: 0px;
+    }
+    @media screen and (max-width: 1200px) {
         .header {
-            width: 65%;
+            width: 55%;
         }
-         .contact {
-     width: 65%;
-    }    
+        .contact {
+            width: 55%;
+        }
         .about {
-            width: 65%;
+            width: 55%;
+        }
+        .id {
+            width: 55%;
         }
         .projects {
-            width: 65%;
+            width: 55%;
         }
         .slideshow {
-            width: 65%;
+            width: 55%;
         }
         .arrow {
-            background-size: 7%;
+            width: 6%;
         }
-        @media screen and (max-width: 750px) {
+        @media screen and (max-width: 980px) {
             body, h5 {
-                font-size: 2.6vw;
+                font-size: 1.9vw;
             }
             h4 {
-                font-size: 2.1vw;
+                font-size: 1.6vw;
             }
             p {
-                font-size: 1.8vw;
+                font-size: 1.4vw;
             }
             .header {
-                width: 80%;
+                width: 65%;
             }
-             .contact {
-     width: 80%;
-    }    
+            .contact {
+                width: 65%;
+            }
             .about {
-                width: 80%;
+                width: 65%;
+            }
+            .id {
+                width: 65%;
             }
             .projects {
-                width: 80%;
+                width: 65%;
             }
             .slideshow {
-                width: 80%;
+                width: 65%;
             }
             .arrow {
-                width: 8%;
+                background-size: 7%;
             }
-            @media screen and (max-width: 540px) {
+            @media screen and (max-width: 750px) {
                 body, h5 {
-                    font-size: 3.3vw;
+                    font-size: 2.6vw;
                 }
                 h4 {
-                    font-size: 2.8vw;
+                    font-size: 2.1vw;
                 }
                 p {
-                    font-size: 2.4vw;
+                    font-size: 1.8vw;
                 }
                 .header {
-                    width: 95%;
+                    width: 80%;
                 }
-                 .contact {
-     width: 95%;
-    }    
+                .contact {
+                    width: 80%;
+                }
                 .about {
-                    width: 95%;
+                    width: 80%;
+                }
+                .id {
+                    width: 80%;
                 }
                 .projects {
-                    width: 95%;
+                    width: 80%;
                 }
                 .slideshow {
-                    width: 95%;
+                    width: 80%;
                 }
                 .arrow {
-                    width: 9%;
+                    width: 8%;
                 }
-                @media screen and (max-width: 380px) {
+                @media screen and (max-width: 540px) {
                     body, h5 {
-                        font-size: 3.5vw;
+                        font-size: 3.3vw;
                     }
                     h4 {
-                        font-size: 3vw;
+                        font-size: 2.8vw;
                     }
                     p {
-                        font-size: 2.6vw;
+                        font-size: 2.4vw;
                     }
                     .header {
-                        width: 100%;
+                        width: 95%;
                     }
-                     .contact {
-     width: 100%;
-    }    
+                    .contact {
+                        width: 95%;
+                    }
                     .about {
-                        width: 100%;
+                        width: 95%;
+                    }
+                    .id {
+                        width: 95%;
                     }
                     .projects {
-                        width: 100%;
+                        width: 95%;
                     }
                     .slideshow {
-                        width: 100%;
+                        width: 95%;
                     }
                     .arrow {
-                       width: 10%;
+                        width: 9%;
                     }
+                    @media screen and (max-width: 380px) {
+                        body, h5 {
+                            font-size: 3.5vw;
+                        }
+                        h4 {
+                            font-size: 3vw;
+                        }
+                        p {
+                            font-size: 2.6vw;
+                        }
+                        .header {
+                            width: 100%;
+                        }
+                        .contact {
+                            width: 100%;
+                        }
+                        .about {
+                            width: 100%;
+                        }
+                        .id {
+                            width: 100%;
+                        }
+                        .projects {
+                            width: 100%;
+                        }
+                        .slideshow {
+                            width: 100%;
+                        }
+                        .arrow {
+                            width: 10%;
+                        }
 </style>
+
 <body>
-<div class="space">
-</div>
-<div class="header w3-animate-opacity">
-	<div class="center">
-		<h5>Mattia Davide Amico</h5>
-		<h4>Sonic Interaction Designer</h4>
-	</div>
-</div>
-<div class="w3-center">
-	<input type="image" src="artworks/arrow.svg" class="arrow w3-animate-fading" alt="X">
-</div>
-<div class="space">
-</div>
-<div class="projects fadeInBlock">
-	<div class="center2">
-		<h5>Projects</h5>
-	</div>
-</div>
-<div class="smallspace init">
-</div>
-<div id="Paris" class="tabcontent">
-	<div class="projects w3-center w3-animate-opacity ">
-		<h4 class="w3-padding">MinusPlus - Interactive audio intallation</h4>
-		<div class="w3-center">
-			<div class="videoWrapper">
-				<iframe width="0" height="0" src="0" allowfullscreen>
-				</iframe>
-			</div>
-		</div>
-		<div class="mediumspace">
-		</div>
-		<div class="w3-center ">
-			<h4>Scheda Tecnica</h4>
-		</div>
-		<div class="justify w3-padding-xlarge">
-			<p>
-				2 moog Theremin Etherwave
-			</p>
-			<p>
-				Scheda audio rme fireface uc
-			</p>
-			<p>
-				Applicazione custom sviluppata in MaxMsp per la conversione della variazione di voltaggio in GM
-			</p>
-			<p>
-				Ableton live
-			</p>
-			<p>
-				macbook pro
-			</p>
-			<p>
-				coppia monitor Adam A7X
-			</p>
-			<div class="smallspace">
-			</div>
-		</div>
-		<div class="w3-center ">
-			<h4>Funzionamento</h4>
-		</div>
-		<div class="justify w3-padding-xlarge ">
-			<p>
-				I Theremin posizionati ad una distanza calibrata producono un campo di risonanza elettromagnetica entro il quale le variazioni di prossimità di oggetti e/o persone producono un fenomeno di distorsione del segnale codificato in linguaggio midi standard. Il processo viene gestito da un software dedicato sviluppato in MaxMsp che permette una precisa mappatura sonora dell’area di interazione, mentre Il suono viene generato in tempo reale da una catena di processi di sintesi con parametri dinamici che rispondono linearmente alle variazioni del campo.
-			</p>
-			<a href="javascript:void(0)" class="tablinks back video" onclick="openCity(event, 'London')" data-video="">
-			<div class="w3-center">
-				<img src="artworks/back.svg" style="width:10%" alt="">
-			</div>
-			</a>
-		</div>
-	</div>
-</div>
-<a href="javascript:void(0)" class="tablinks start" onclick="openCity(event, 'London')" id="defaultOpen"></a>
-<div class="slideshow tabcontent " id="London">
-	<div class="w3-row w3-padding-jumbo ">
-		<div class="w3-half fadeInBlock">
-			<a href="javascript:void(0)" data-video="https://www.youtube.com/embed/LVQDzDt8Z3k" onclick="openCity(event, 'Paris')" class="video tablinks">
-			<img src="Projects/1.svg" style="width:30%" alt="X"></a>
-			<p>
-				minusPLUS
-			</p>
-			<div class="smallspace">
-			</div>
-		</div>
-		<div class="w3-half fadeInBlock">
-			<a href="javascript:void(0)" data-video="https://www.youtube.com/embed/LVQDzDt8Z3k" onclick="openCity(event, 'Paris')" class="video tablinks">
-			<img src="Projects/1.svg" style="width:30%" alt="X"></a>
-			<p>
-				minusPLUS
-			</p>
-			<div class="smallspace">
-			</div>
-		</div>
-		<div class="w3-half fadeInBlock">
-			<a href="javascript:void(0)" data-video="https://www.youtube.com/embed/LVQDzDt8Z3k" onclick="openCity(event, 'Paris')" class="video tablinks">
-			<img src="Projects/1.svg" style="width:30%" alt="X"></a>
-			<p>
-				minusPLUS
-			</p>
-			<div class="smallspace">
-			</div>
-		</div>
-		<div class="w3-half fadeInBlock">
-			<a href="javascript:void(0)" data-video="https://www.youtube.com/embed/LVQDzDt8Z3k" onclick="openCity(event, 'Paris')" class="video tablinks">
-			<img src="Projects/1.svg" style="width:30%" alt="X"></a>
-			<p>
-				minusPLUS
-			</p>
-			<div class="smallspace">
-			</div>
-		</div>
-		<div class="w3-half fadeInBlock">
-			<a href="javascript:void(0)" data-video="https://www.youtube.com/embed/LVQDzDt8Z3k" onclick="openCity(event, 'Paris')" class="video tablinks">
-			<img src="Projects/1.svg" style="width:30%" alt="X"></a>
-			<p>
-				minusPLUS
-			</p>
-			<div class="smallspace">
-			</div>
-		</div>
-		<div class="w3-half fadeInBlock">
-			<a href="javascript:void(0)" data-video="https://www.youtube.com/embed/LVQDzDt8Z3k" onclick="openCity(event, 'Paris')" class="video tablinks">
-			<img src="Projects/1.svg" style="width:30%" alt="X"></a>
-			<p>
-				minusPLUS
-			</p>
-			<div class="smallspace">
-			</div>
-		</div>
-		<div class="w3-half fadeInBlock">
-			<a href="javascript:void(0)" data-video="https://www.youtube.com/embed/LVQDzDt8Z3k" onclick="openCity(event, 'Paris')" class="video tablinks">
-			<img src="Projects/1.svg" style="width:30%" alt="X"></a>
-			<p>
-				minusPLUS
-			</p>
-			<div class="smallspace">
-			</div>
-		</div>
-		<div class="w3-half fadeInBlock">
-			<a href="javascript:void(0)" data-video="https://www.youtube.com/embed/LVQDzDt8Z3k" onclick="openCity(event, 'Paris')" class="video tablinks">
-			<img src="Projects/1.svg" style="width:30%" alt="X"></a>
-			<p>
-				minusPLUS
-			</p>
-			<div class="smallspace">
-			</div>
-		</div>
-	</div>
-	<script>
-function openCity(evt, cityName) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-    document.getElementById(cityName).style.display = "block";
-    evt.currentTarget.className += " active";
-}
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
-	</script>
-</div>
-<div class="mediumspace">
-</div>
-<div class="about fadeInBlock">
-	<div class="w3-row ">
-		<div class="w3-half">
-			<p>
-				 Skills
-			</p>
-		</div>
-		<div class="w3-half">
-			<p>
-				 Audio signal processing, Acoustic, Psicoacoustic, Electroacoustic, generative A/V processing, Sound Design, Sound Technologies
-			</p>
-		</div>
-	</div>
-</div>
-<div class="smallspace">
-</div>
-<div class="about fadeInBlock">
-	<div class="w3-row">
-		<div class="w3-half">
-			<p>
-				 Software knowledge
-			</p>
-		</div>
-		<div class="w3-half">
-			<p>
-				 Max/Msp, Pure Data, C-Sound, Ableton, Coge, Renoise, Logic, Pro Tools, Reason, Resolume, Cell Dna, Adobe Audition, Cubase, Digital Performer, Audiosculpt
-			</p>
-		</div>
-	</div>
-</div>
-<div class="smallspace">
-</div>
-<div class="about fadeInBlock">
-	<div class="w3-row ">
-		<div class="w3-half">
-			<p>
-				 Professional experience
-			</p>
-		</div>
-		<div class="w3-half">
-			<p>
-				Co-Developer for "SYN" (interactive murble musical interface), Mario Coppola
-			</p>
-			<p>
-				Co-Developer for "TACTO" (interactive musical table), Officine Tesla
-			</p>
-			<p>
-				Music Producer for "The Mo'Joes" interactive Entertainment, Tallin
-			</p>
-			<p>
-				Developer, Livid instrument, Texas
-			</p>
-			<p>
-				Producer, Carosello Records, Milano
-			</p>
-			<p>
-				Musician, Producer, Sound Engineering, SONY Italia, Rome
-			</p>
-			<p>
-				Sound Engineering, MAYBESIX, Varese
-			</p>
-			<p>
-				Video Game Composer, Milestone, Milano
-			</p>
-		</div>
-	</div>
-</div>
-<div class="smallspace">
-</div>
-<div class="about fadeInBlock">
-	<div class="w3-row ">
-		<div class="w3-half">
-			<p>
-				 Association activities
-			</p>
-		</div>
-		<div class="w3-half">
-			<p>
-				 Co-founder, Officine Tesla, Milano
-			</p>
-			<p>
-				 Co-founder, Lucida Console, Lecco
-			</p>
-			<p>
-				 Co-founder, PC HUNTER, Lecco
-			</p>
-		</div>
-	</div>
-</div>
-<div class="smallspace">
-</div>
-<div class="about fadeInBlock">
-	<div class="w3-row ">
-		<div class="w3-half">
-			<p>
-				 Areas of interest
-			</p>
-		</div>
-		<div class="w3-half">
-			<p>
-				 Interaction design, digital liuthery, electromecanic musical instruments, generative music, cognitive modelling, computer assisted music, new technologies, kinetic art, cymatics, sound phenomena
-			</p>
-		</div>
-	</div>
-</div>
-<div class="mediumspace">
-</div>
-<div class="contact fadeInBlock">
-	<div class="center">
-	</div>
-</div>
-<script>
-    $(".back").click(function() {
-    $('html,body').animate({
-        scrollTop: $(".start").offset().top},
-        0);
-});
-    $(".video").click(function() {
-    $('html,body').animate({
-        scrollTop: $(".projects").offset().top},
-        0);
-});
-     $(".arrow").click(function() {
-    $('html,body').animate({
-        scrollTop: $(".projects").offset().top},
-        0);
-});
+    <div class="space"> </div>
+    <div class="header w3-animate-opacity">
+        <div class="center">
+            <h5>Mattia Davide Amico</h5>
+            <h4>Sonic Interaction Designer</h4> </div>
+    </div>
+    <div class="w3-center">
+        <input type="image" src="artworks/arrow.svg" class="arrow next1 w3-animate-fading" alt="X"> </div>
+    <div class="space"> </div>
+    <div class="projects fadeInBlock">
+        <div class="center2">
+            <h5>Progetti</h5> </div>
+    </div>
+    <div class="smallspace"> </div>
+    <div id="a2" class="tabcontent">
+        <div class="projects w3-center w3-animate-opacity ">
+            <h4 class="w3-padding">MinusPlus - Interactive audio intallation</h4>
+            <div class="videoWrapper">
+                <iframe width="0" height="0" src="0" allowfullscreen> </iframe>
+            </div>
+            <div class="mediumspace"> </div>
+            <div class="w3-center ">
+                <h4>Setup</h4> </div>
+            <div class="justify w3-padding-xlarge">
+                <p> 2 moog Theremin Etherwave </p>
+                <p> Scheda audio RME Fireface UC </p>
+                <p> Applicazione custom sviluppata in MaxMsp per la conversione della variazione di voltaggio in GM </p>
+                <p> Ableton live </p>
+                <p> macbook pro </p>
+                <p> coppia monitor Adam A7X </p>
+                <div class="smallspace"> </div>
+            </div>
+            <div class="w3-center ">
+                <h4>Descrizione</h4> </div>
+            <div class="justify w3-padding-xlarge ">
+                <p> I Theremin posizionati ad una distanza calibrata producono un campo di risonanza elettromagnetica entro il quale le variazioni di prossimità di oggetti e/o persone determinano una distorsione del segnale codificato in midi standard. Il processo viene gestito da un software dedicato sviluppato in MaxMsp che permette una precisa mappatura sonora dell’area di interazione, Il suono viene generato in tempo reale da una catena di processi di sintesi con parametri dinamici che rispondono linearmente alle variazioni del campo. </p>
+                <a href="javascript:void(0)" class="tablinks back video" onclick="openDiv(event, 'a1')" data-video="">
+                    <div class="w3-center"> <img src="artworks/back.svg" style="width:10%" alt=""> </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="a3" class="tabcontent">
+        <div class="projects w3-center w3-animate-opacity ">
+            <h4 class="w3-padding">Lucidaconsole - Realtime generative A/V</h4>
+            <div class="videoWrapper">
+                <iframe width="0" height="0" src="0" allowfullscreen> </iframe>
+            </div>
+            <div class="mediumspace"> </div>
+            <div class="w3-center ">
+                <h4>Setup</h4> </div>
+            <div class="justify w3-padding-xlarge">
+                <p> 1 proiettore </p>
+                <p> Scheda audio RME Fireface UC </p>
+                <p> Applicazione custom sviluppata in MaxMsp per la conversione FFT in matrici OSC/GM </p>
+                <p> Ableton live </p>
+                <p> Coge </p>
+                <p> Controller Livid Ohm + custom firmware (32 midichannel x 128 mdivalue = 4096 parametri) </p>
+                <p> 2 macbook pro sincronizzati </p>
+                <p> coppia monitor Adam A7X </p>
+                <div class="smallspace"> </div>
+            </div>
+            <div class="w3-center ">
+                <h4>Descrizione</h4> </div>
+            <div class="justify w3-padding-xlarge ">
+                <p> Il progetto nasce dalla collaborazione con l'architetto/fotografo/videomaker Michele Consoli e si propone di indagare le più recenti tecnologie multimediali al fine di realizzare un sofisticato strumento di manipolazione A/V in temporeale. Frutto di 2 anni di sviluppo hardware e software, il setup dei Lucidaconsole vanta dei motori di sintesi in grado di operare con una latenza complessiva inferiore ai 13ms mentre la superficie di controllo è stata completamente riprogrammata per ottenere la possibilità di gestire fino a 4096 parametri contemporaneamente (128 nativi). Il potenziale espressivo/compositivo è paragonabile a quello di uno strumento musicale classico e risponde all'esigenza di avvicinare l'arte digitale agli standard performativi di uno strumentista tradizionale. </p>
+                <a href="javascript:void(0)" class="tablinks back video" onclick="openDiv(event, 'a1')" data-video="">
+                    <div class="w3-center"> <img src="artworks/back.svg" style="width:10%" alt=""> </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="a4" class="tabcontent">
+        <div class="projects w3-center w3-animate-opacity ">
+            <h4 class="w3-padding">Lisa - Improvvisazione per no-input mixer A/V</h4>
+            <div class="videoWrapper">
+                <iframe width="0" height="0" src="0" allowfullscreen> </iframe>
+            </div>
+            <div class="mediumspace"> </div>
+            <div class="w3-center ">
+                <h4>Setup</h4> </div>
+            <div class="justify w3-padding-xlarge">
+                <p> Mixer Phonic MU 1002 </p>
+                <p> Phase Delay (Hilbert) </p>
+                <p> Applicazione custom sviluppata in MaxMsp per la conversione del segnale in coordinate polari </p>
+                <p> Ableton live </p>
+                <p> Macbook pro </p>
+                <p> coppia monitor Adam A7X </p>
+                <div class="smallspace"> </div>
+            </div>
+            <div class="w3-center ">
+                <h4>Descrizione</h4> </div>
+            <div class="justify w3-padding-xlarge ">
+                <p> Nel tentativo di definire un metodo d'indagine per la comprensione della relazione che intercorre fra il suono e la sua forma, lisa rappresenta uno strumento di analisi elementare ispirato dagli studi di Ernst Chladni, Huang-Hilbert e Jules Antoine Lissajous. Per quanto semplice nella sua realizzazione, Lisa è in grado di visualizzare la reale geometria piana di un suono, facilitando notevolmente il processo di comprensione del fenomeno acustico e stimolando nuove tecniche di sound design. Per la dimostrazione è stato utilizzato un mixer settato in modalità feedback, cablando un canale stereo e l’uscita mono ausiliaria a tre ingressi di linea. Il canale destro del main out è sfasato con il delay, sommato al sinistro e poi analizzato in realtime dal software. I risultati sonori ottenuti sono la conseguenza diretta dei tentativi di disciplinare timbricamente e dinamicamente il feedback audio al fine di ottenere graficamente un cerchio. </p>
+                <a href="javascript:void(0)" class="tablinks back video" onclick="openDiv(event, 'a1')" data-video="">
+                    <div class="w3-center"> <img src="artworks/back.svg" style="width:10%" alt=""> </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="a5" class="tabcontent">
+        <div class="projects w3-center w3-animate-opacity ">
+            <h4 class="w3-padding">Singing 3D printer</h4>
+            <div class="videoWrapper">
+                <iframe width="0" height="0" src="0" allowfullscreen> </iframe>
+            </div>
+            <div class="mediumspace"> </div>
+            <div class="w3-center ">
+                <h4>Setup</h4> </div>
+            <div class="justify w3-padding-xlarge">
+                <p> Mendel 3D printer </p>
+                <p> Piezo omnidirezionale </p>
+                <p> Applicazione custom per la conversione da midi a STL </p>
+                <p> Ableton Live </p>
+                <p> Livid OHM64 </p>
+                <p> Macbook pro </p>
+                <p> Speaker 12" fullrange </p>
+                <div class="smallspace"> </div>
+            </div>
+            <div class="w3-center ">
+                <h4>Descrizione</h4> </div>
+            <div class="justify w3-padding-xlarge ">
+                <p> In occasione dell'inaugurazione del The Fablab(MI) è stata data "voce" allo strumento protagonista della Digital Fabrication al fine di ispirare l'idea del potenziale espressivo di una rappresentazione solida del suono, nonché a dimostrare le proprietà musicali degli strumenti utili alla sua ipotetica materializzazione. L'articolazione melodica della stampante è resa possibile da un software dedicato per la conversione del midi in comandi STL mentre le vibrazioni acustiche provocate dai motori vengono captate da un piezo ed eleborate timbricamente da un banco di effetti digitali. </p>
+                <a href="javascript:void(0)" class="tablinks back video" onclick="openDiv(event, 'a1')" data-video="">
+                    <div class="w3-center"> <img src="artworks/back.svg" style="width:10%" alt=""> </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="a6" class="tabcontent">
+        <div class="projects w3-center w3-animate-opacity ">
+            <h4 class="w3-padding">Syn - Marble controller for electronic music</h4>
+            <div class="videoWrapper">
+                <iframe width="0" height="0" src="0" allowfullscreen> </iframe>
+            </div>
+            <div class="mediumspace"> </div>
+            <div class="w3-center ">
+                <h4>Setup</h4> </div>
+            <div class="justify w3-padding-xlarge">
+                <p> Marble sculpture </p>
+                <p> Piezo omnidirezionale </p>
+                <p> Applicazione custom sviluppata in MaxMsp per la conversione del segnale in GM </p>
+                <p> Generic virtual instrument </p>
+                <p> Macbook pro </p>
+                <p> coppia monitor Adam A7X </p>
+                <div class="smallspace"> </div>
+            </div>
+            <div class="w3-center ">
+                <h4>Descrizione</h4> </div>
+            <div class="justify w3-padding-xlarge ">
+                <p> Il progetto nasce dalla collaborazione con il designer Mario Coppola con il quale è stato affrontato uno studio delle proprietà acustiche del marmo e contestualmente ingegnerizzato un setup in grado di tradurre le vibrazioni in linguaggio midi standard. Il prototipo realizzato è la versione 2.0 di RU(a)MORE, versione acustica realizzata su ispirazione di Pinuccio Sciola. "La versione 2.0 può prevedere un collegamento con un laptop in maniera da dare una totale versatilità a una traccia musicale," continua Mario Coppola, "così facendo in un unico oggetto potremmo fare un salto temporale unico che parte dall’età della pietra e va a finire all’era contemporanea." </p>
+                <a href="javascript:void(0)" class="tablinks back video" onclick="openDiv(event, 'a1')" data-video="">
+                    <div class="w3-center"> <img src="artworks/back.svg" style="width:10%" alt=""> </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="a7" class="tabcontent">
+        <div class="projects w3-center w3-animate-opacity ">
+            <h4 class="w3-padding">TACTO - Interactive musical table</h4>
+            <div class="videoWrapper">
+                <iframe width="0" height="0" src="0" allowfullscreen> </iframe>
+            </div>
+            <div class="mediumspace"> </div>
+            <div class="w3-center ">
+                <h4>Setup</h4> </div>
+            <div class="justify w3-padding-xlarge">
+                <p> Zotac ZBOX </p>
+                <p> Arduino Mega </p>
+                <p> Applicazione custom sviluppata in PureData per la conversione dei segnali in GM </p>
+                <p> Ableton Live </p>
+                <p> Sensoristica (6 prossimità + 18 capacitivi) </p>
+                <p> Tavolo custom design </p>
+                <div class="smallspace"> </div>
+            </div>
+            <div class="w3-center ">
+                <h4>Descrizione</h4> </div>
+            <div class="justify w3-padding-xlarge ">
+                <p> TACTO è un progetto che nasce da diverse collaborazioni all'interno delle Officine Tesla, associazione culturale che promuove l’educazione alla “qualità d’ascolto” attraverso lo sviluppo di tecnologie musicali per favorire l'inclusione sociale e lo scambio culturale. TACTO è un tavolo interattivo dotato sulla sua superficie di sensori atti a raccogliere e tradurre gesti e azioni in suono, attraverso il solo contatto della pelle o il posizionamento di qualsiasi oggetto quotidiano. Lo sviluppo intuitivo e strettamente connesso di interaction, graphic e sound design, guida chiunque nella scoperta collettiva delle potenzialità espressive del tavolo, dalle più immediate alle più complesse, senza bisogno di particolari capacità o conoscenze musicali. </p>
+                <a href="javascript:void(0)" class="tablinks back video" onclick="openDiv(event, 'a1')" data-video="">
+                    <div class="w3-center"> <img src="artworks/back.svg" style="width:10%" alt=""> </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="a8" class="tabcontent">
+        <div class="projects w3-center w3-animate-opacity ">
+            <h4 class="w3-padding">Over - Interactive sound sculpture</h4>
+            <div class="videoWrapper">
+                <iframe width="0" height="0" src="0" allowfullscreen> </iframe>
+            </div>
+            <div class="mediumspace"> </div>
+            <div class="w3-center ">
+                <h4>Setup</h4> </div>
+            <div class="justify w3-padding-xlarge">
+                <p> Gabbia metallica </p>
+                <p> 6 chiodi </p>
+                <p> Scheda audio RME Fireface UC </p>
+                <p> Ableton live </p>
+                <p> Piezo </p>
+                <p> Macbook pro </p>
+                <p> coppia monitor Adam A7X </p>
+                <div class="smallspace"> </div>
+            </div>
+            <div class="w3-center ">
+                <h4>Descrizione</h4> </div>
+            <div class="justify w3-padding-xlarge ">
+                <p> Over è una scultura sonora realizzata in una cabina dell'alta tensione dell' ex officina Jaguar (Sempione Green Garage - MI), in occasione dell'evento NAVATA34 organizzato da Officine Tesla. L'installazione sfrutta le caratteristiche timbriche della rete metallica che per mezzo dello sfregamento dei chiodi ricrea il suono di un temporale. Le vibrazioni generate vengono captate da un piezo e processate in temporeale da una catena di effetti dinamici stand-alone. </p>
+                <a href="javascript:void(0)" class="tablinks back video" onclick="openDiv(event, 'a1')" data-video="">
+                    <div class="w3-center"> <img src="artworks/back.svg" style="width:10%" alt=""> </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="a9" class="tabcontent">
+        <div class="projects w3-center w3-animate-opacity ">
+            <h4 class="w3-padding">T - Elctromagnetic sound sculpture</h4> <img src="Projects/T.jpeg" style="width:100%" alt="X">
+            <div class="mediumspace"> </div>
+            <div class="w3-center ">
+                <h4>Descrizione</h4> </div>
+            <div class="justify w3-padding-xlarge ">
+                <p> T consiste in una serie di sculture audioreattive che sfruttano i principi dell'elettromagnetismo e della sospensione magnetica, attualmente in fase di realizzazione. Nella foto viene presentato un primo prototipo di arpa magnetica elettroconduttiva in grado di rispondere acusticamente alle variazione meccaniche dei fili conduttivi messi in tensione dalla forza di attrazione di un magnete al neodimio </p>
+                <a href="javascript:void(0)" class="tablinks back video" onclick="openDiv(event, 'a1')" data-video="">
+                    <div class="w3-center"> <img src="artworks/back.svg" style="width:10%" alt=""> </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <a href="javascript:void(0)" class="tablinks start" onclick="openDiv(event, 'a1')" id="defaultOpen"></a>
+    <div class="slideshow tabcontent w3-animate-opacity" id="a1">
+        <div class="w3-row w3-padding-jumbo ">
+            <div class="w3-half fadeInBlock">
+                <a href="javascript:void(0)" data-video="https://www.youtube.com/embed/LVQDzDt8Z3k" onclick="openDiv(event, 'a2')" class="video tablinks"> <img src="Projects/1.svg" style="width:30%" alt="X"> </a>
+                <p> minusPLUS </p>
+                <div class="smallspace"> </div>
+            </div>
+            <div class="w3-half fadeInBlock">
+                <a href="javascript:void(0)" data-video="https://www.youtube.com/embed/YbA0geIXmFA" onclick="openDiv(event, 'a3')" class="video tablinks"> <img src="Projects/2.svg" style="width:30%" alt="X"> </a>
+                <p> Lucidaconsole </p>
+                <div class="smallspace"> </div>
+            </div>
+            <div class="w3-half fadeInBlock">
+                <a href="javascript:void(0)" data-video="https://www.youtube.com/embed/hZGl7S5T4hY" onclick="openDiv(event, 'a4')" class="video tablinks"> <img src="Projects/3.svg" style="width:30%" alt="X"> </a>
+                <p> Lisa </p>
+                <div class="smallspace"> </div>
+            </div>
+            <div class="w3-half fadeInBlock">
+                <a href="javascript:void(0)" data-video="https://www.youtube.com/embed/Av7d1VuQg1M" onclick="openDiv(event, 'a5')" class="video tablinks"> <img src="Projects/4.svg" style="width:30%" alt="X"> </a>
+                <p> Singing 3D printer </p>
+                <div class="smallspace"> </div>
+            </div>
+            <div class="w3-half fadeInBlock">
+                <a href="javascript:void(0)" data-video="https://player.vimeo.com/video/163843683" onclick="openDiv(event, 'a6')" class="video tablinks"> <img src="Projects/5.svg" style="width:30%" alt="X"> </a>
+                <p> Syn </p>
+                <div class="smallspace"> </div>
+            </div>
+            <div class="w3-half fadeInBlock">
+                <a href="javascript:void(0)" data-video="https://player.vimeo.com/video/131434965" onclick="openDiv(event, 'a7')" class="video tablinks"> <img src="Projects/6.svg" style="width:30%" alt="X"> </a>
+                <p> Tacto </p>
+                <div class="smallspace"> </div>
+            </div>
+            <div class="w3-half fadeInBlock">
+                <a href="javascript:void(0)" data-video="https://www.youtube.com/embed/1GMZYjFJiK0" onclick="openDiv(event, 'a8')" class="video tablinks"> <img src="Projects/7.svg" style="width:30%" alt="X"> </a>
+                <p> Over </p>
+                <div class="smallspace"> </div>
+            </div>
+            <div class="w3-half fadeInBlock">
+                <a href="javascript:void(0)" onclick="openDiv(event, 'a9')" class="video tablinks"> <img src="Projects/8.svg" style="width:30%" alt="X"> </a>
+                <p> T </p>
+                <div class="smallspace"> </div>
+            </div>
+        </div>
+        <script>
+            function openDiv(evt, divName) {
+                    var i, tabcontent, tablinks;
+                    tabcontent = document.getElementsByClassName("tabcontent");
+                    for (i = 0; i < tabcontent.length; i++) {
+                        tabcontent[i].style.display = "none";
+                    }
+                    tablinks = document.getElementsByClassName("tablinks");
+                    for (i = 0; i < tablinks.length; i++) {
+                        tablinks[i].className = tablinks[i].className.replace(" active", "");
+                    }
+                    document.getElementById(divName).style.display = "block";
+                    evt.currentTarget.className += " active";
+                }
+                // Get the element with id="defaultOpen" and click on it
+            document.getElementById("defaultOpen").click();
+        </script>
+    </div>
+    <div class="space"> </div>
+    <div class="projects fadeInBlock">
+        <div class="center2">
+            <h5>CV</h5> </div>
+    </div>
+    <div class="smallspace"> </div>
+    <div class="about fadeInBlock">
+        <div class="w3-row ">
+            <div class="w3-third w3-padding-xlarge">
+                <p> Competenze </p>
+            </div>
+            <div class="w3-twothird w3-padding-xlarge">
+                <p> Audio signal processing, Acoustic, Psicoacoustic, Electroacoustic, generative A/V processing, Sound Design, Sound Technologies </p>
+            </div>
+        </div>
+    </div>
+    <div class="smallspace"> </div>
+    <div class="about fadeInBlock">
+        <div class="w3-row">
+            <div class="w3-third w3-padding-xlarge">
+                <p> Software knowledge </p>
+            </div>
+            <div class="w3-twothird w3-padding-xlarge">
+                <p> Max/Msp, Pure Data, C-Sound, Ableton, Coge, Renoise, Logic, Pro Tools, Reason, Resolume, Cell Dna, Adobe Audition, Cubase, Digital Performer, Audiosculpt </p>
+            </div>
+        </div>
+    </div>
+    <div class="smallspace"> </div>
+    <div class="about fadeInBlock">
+        <div class="w3-row ">
+            <div class="w3-third w3-padding-xlarge">
+                <p> Esperienze professionali </p>
+            </div>
+            <div class="w3-twothird w3-padding-xlarge">
+                <p> Co-Developer for "SYN" (interactive murble interface), Mario Coppola </p>
+                <p> Co-Developer for "TACTO" (interactive musical table), Officine Tesla </p>
+                <p> Music Producer for "The Mo'Joes" interactive Entertainment, Tallin </p>
+                <p> Developer, Livid instrument, Texas </p>
+                <p> Producer, Carosello Records, Milano </p>
+                <p> Musician, Producer, Sound Engineering, SONY Italia, Rome </p>
+                <p> Sound Engineering, MAYBESIX, Varese </p>
+                <p> Video Game Composer, Milestone, Milano </p>
+            </div>
+        </div>
+    </div>
+    <div class="smallspace"> </div>
+    <div class="about fadeInBlock">
+        <div class="w3-row ">
+            <div class="w3-third w3-padding-xlarge">
+                <p> Attività associative </p>
+            </div>
+            <div class="w3-twothird w3-padding-xlarge">
+                <p> Co-founder, Officine Tesla, Milano </p>
+                <p> Co-founder, Lucida Console, Lecco </p>
+                <p> Co-founder, PC HUNTER, Lecco </p>
+            </div>
+        </div>
+    </div>
+    <div class="smallspace"> </div>
+    <div class="about fadeInBlock">
+        <div class="w3-row ">
+            <div class="w3-third w3-padding-xlarge">
+                <p> Aree di interesse </p>
+            </div>
+            <div class="w3-twothird w3-padding-xlarge">
+                <p> Interaction design, digital liuthery, electromecanic musical instruments, generative music, cognitive modelling, computer assisted music, new technologies, kinetic art, cymatics, sound phenomena </p>
+            </div>
+        </div>
+    </div>
+    <div class="space"> </div>
+    <div class="projects fadeInBlock">
+        <div class="center2">
+            <h5>Contact</h5> </div>
+    </div>
+    <div class="smallspace"> </div>
+    <div class="id fadeInBlock">
+        <div class="w3-row">
+            <div class="w3-third w3-center w3-padding-small">
+                <p> Facebook </p>
+                <p> facebook.com/monesis </p>
+            </div>
+            <div class="w3-third w3-center w3-padding-small ">
+                <p> Mobile </p>
+                <p> 329 41 72 247 </p>
+            </div>
+            <div class="w3-third w3-center w3-padding-small ">
+                <p> E-mail </p>
+                <p> mattiadavide@gmail.com </p>
+            </div>
+        </div>
+    </div>
+    <div class="smallspace"> </div>
+    <div class="contact">
+        <div class="center"> </div>
+    </div>
+    <div class="bottomspace"> </div>
+    <script>
+        $(".video").click(function() {
+            $('html,body').animate({
+                scrollTop: $(".projects").offset().top
+            }, 0);
+        });
+        $(".next1").click(function() {
+            $('html,body').animate({
+                scrollTop: $(".projects").offset().top
+            }, 1000);
+        });
     </script>
 </body>
+
 </html>
