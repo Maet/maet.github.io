@@ -19,15 +19,13 @@ $(function() {
 $(window).on("load", function() {
     $(window).scroll(function() {
         $(".fadeInBlock").each(function() {
-            /* Check the location of each desired element */
             var objectBottom = $(this).offset().top + $(this).outerHeight();
             var windowBottom = $(window).scrollTop() + $(window).innerHeight();
-            /* If the element is completely within bounds of the window, fade it in */
-            if(objectBottom < windowBottom) { //object comes into view (scrolling down)
+            if(objectBottom < windowBottom) { 
                 if($(this).css("opacity") == 0) {
                     $(this).fadeTo(300, 1);
                 }
-            } else { //object goes out of view (scrolling up)
+            } else { 
                 if($(this).css("opacity") == 1) {
                     $(this).fadeTo(300, 0);
                 }
@@ -36,8 +34,6 @@ $(window).on("load", function() {
     });
     $(window).scroll(); //invoke scroll-handler on page-load
 });
-    
-  
 </script>
 <style>
 body,
@@ -98,7 +94,6 @@ html {
 }
 .justify {
     text-align: justify;
-    
 }
 .center2 {
     padding: 1%;
@@ -124,11 +119,6 @@ html {
 }
 .arrow {
  width: 5%;
-    
- 
-    
-   
-    
 }
 textarea:focus,
 input:focus {
@@ -154,6 +144,9 @@ input:hover {
     left: 0;
     width: 100%;
     height: 100%;
+}    
+iframe{
+    border-width: 0px;    
 }
 @media screen and (max-width: 1200px) {
     .header {
@@ -187,7 +180,6 @@ input:hover {
         .header {
             width: 65%;
         }
-        
          .contact {
      width: 65%;
     }    
@@ -242,16 +234,13 @@ input:hover {
                     font-size: 2.4vw;
                 }
                 .header {
-                    
                     width: 95%;
                 }
-                
                  .contact {
      width: 95%;
     }    
                 .about {
                     width: 95%;
-                   
                 }
                 .projects {
                     width: 95%;
@@ -275,13 +264,11 @@ input:hover {
                     .header {
                         width: 100%;
                     }
-                    
                      .contact {
      width: 100%;
     }    
                     .about {
                         width: 100%;
-                        
                     }
                     .projects {
                         width: 100%;
@@ -290,7 +277,6 @@ input:hover {
                         width: 100%;
                     }
                     .arrow {
-                        
                        width: 10%;
                     }
 </style>
@@ -304,12 +290,10 @@ input:hover {
 	</div>
 </div>
 <div class="w3-center">
-<input type="image" src="artworks/arrow.svg" class="arrow w3-animate-fading" alt="X">
-</div>    
-        
+	<input type="image" src="artworks/arrow.svg" class="arrow w3-animate-fading" alt="X">
+</div>
 <div class="space">
 </div>
-    
 <div class="projects fadeInBlock">
 	<div class="center2">
 		<h5>Projects</h5>
@@ -318,63 +302,133 @@ input:hover {
 <div class="smallspace init">
 </div>
 <div id="Paris" class="tabcontent">
-  <div class="projects w3-center w3-animate-opacity "><h4 class="w3-padding">MinusPlus - Interactive audio intallation</h4><div class="w3-center"><div class="videoWrapper"><iframe width="0" height="0" src="0"  allowfullscreen></iframe></div></div><div class="mediumspace">
-</div><div class="w3-center "><h4>Scheda Tecnica</h4></div><div class="justify w3-padding-xlarge"><p>2 moog Theremin Etherwave</p><p>Scheda audio rme fireface uc</p><p>Applicazione custom sviluppata in MaxMsp per la conversione della variazione di voltaggio in GM</p><p>Ableton live</p><p>macbook pro</p> <p>coppia monitor Adam A7X</p><div class="smallspace"> </div></div><div class="w3-center "><h4>Funzionamento</h4></div><div class="justify w3-padding-xlarge "><p>I Theremin posizionati ad una distanza calibrata producono un campo di risonanza elettromagnetica entro il quale le variazioni di prossimità di oggetti e/o persone producono un fenomeno di distorsione del segnale codificato in linguaggio midi standard. Il processo viene gestito da un software dedicato sviluppato in MaxMsp che permette una precisa mappatura sonora dell’area di interazione, mentre Il suono viene generato in tempo reale da una catena di processi di sintesi con parametri dinamici che rispondono linearmente alle variazioni del campo.</p><a href="javascript:void(0)" class="tablinks back video" onclick="openCity(event, 'London')" data-video=""><div class="w3-center"><img src="artworks/back.svg" style="width:10%" alt=""></div></a></div></div>
-</div> 
- <a href="javascript:void(0)" class="tablinks start" onclick="openCity(event, 'London')" id="defaultOpen"></a>    
+	<div class="projects w3-center w3-animate-opacity ">
+		<h4 class="w3-padding">MinusPlus - Interactive audio intallation</h4>
+		<div class="w3-center">
+			<div class="videoWrapper">
+				<iframe width="0" height="0" src="0" allowfullscreen>
+				</iframe>
+			</div>
+		</div>
+		<div class="mediumspace">
+		</div>
+		<div class="w3-center ">
+			<h4>Scheda Tecnica</h4>
+		</div>
+		<div class="justify w3-padding-xlarge">
+			<p>
+				2 moog Theremin Etherwave
+			</p>
+			<p>
+				Scheda audio rme fireface uc
+			</p>
+			<p>
+				Applicazione custom sviluppata in MaxMsp per la conversione della variazione di voltaggio in GM
+			</p>
+			<p>
+				Ableton live
+			</p>
+			<p>
+				macbook pro
+			</p>
+			<p>
+				coppia monitor Adam A7X
+			</p>
+			<div class="smallspace">
+			</div>
+		</div>
+		<div class="w3-center ">
+			<h4>Funzionamento</h4>
+		</div>
+		<div class="justify w3-padding-xlarge ">
+			<p>
+				I Theremin posizionati ad una distanza calibrata producono un campo di risonanza elettromagnetica entro il quale le variazioni di prossimità di oggetti e/o persone producono un fenomeno di distorsione del segnale codificato in linguaggio midi standard. Il processo viene gestito da un software dedicato sviluppato in MaxMsp che permette una precisa mappatura sonora dell’area di interazione, mentre Il suono viene generato in tempo reale da una catena di processi di sintesi con parametri dinamici che rispondono linearmente alle variazioni del campo.
+			</p>
+			<a href="javascript:void(0)" class="tablinks back video" onclick="openCity(event, 'London')" data-video="">
+			<div class="w3-center">
+				<img src="artworks/back.svg" style="width:10%" alt="">
+			</div>
+			</a>
+		</div>
+	</div>
+</div>
+<a href="javascript:void(0)" class="tablinks start" onclick="openCity(event, 'London')" id="defaultOpen"></a>
 <div class="slideshow tabcontent " id="London">
-     
 	<div class="w3-row w3-padding-jumbo ">
 		<div class="w3-half fadeInBlock">
-            
-        
-    <input type="image" src="Projects/1.svg" style="width:30%" alt="X" class="video tablinks" data-video="https://www.youtube.com/embed/LVQDzDt8Z3k" onclick="openCity(event, 'Paris')" href="javascript:void(0)">
-    <p>minusPLUS</p>
-                <div class="smallspace"> </div>        
-       </div> 
-        <div class="w3-half fadeInBlock">
-    <input type="image" src="Projects/2.svg" style="width:30%" alt="X" class="video tablinks" data-video="https://www.youtube.com/embed/YbA0geIXmFA" onclick="openCity(event, 'Paris')" href="javascript:void(0)">
-            <p>minusPLUS</p>
-                <div class="smallspace"> </div> 
-            </div> 
-    <div class="w3-half fadeInBlock">
-    <input type="image" src="Projects/3.svg" style="width:30%" alt="X" class="video tablinks" data-video="https://www.youtube.com/embed/hZGl7S5T4hY" onclick="openCity(event, 'Paris')" href="javascript:void(0)"> 
-        <p>minusPLUS</p>
-                <div class="smallspace"> </div> 
-        </div> 
-    <div class="w3-half fadeInBlock">
-    <input type="image" src="Projects/4.svg" style="width:30%" alt="X" class="video tablinks" data-video="https://www.youtube.com/embed/Av7d1VuQg1M" onclick="openCity(event, 'Paris')" href="javascript:void(0)"> 
-        <p>minusPLUS</p>
-                <div class="smallspace"> </div> 
-        </div> 
-       <div class="w3-half fadeInBlock">     
-    <input type="image" src="Projects/5.svg" style="width:30%" alt="X" class="video tablinks" data-video="https://player.vimeo.com/video/163843683" onclick="openCity(event, 'Paris')" href="javascript:void(0)"> 
-           <p>minusPLUS</p>
-                <div class="smallspace"> </div> 
-           </div> 
-        <div class="w3-half fadeInBlock">    
-    <input type="image" src="Projects/6.svg" style="width:30%" alt="X" class="video tablinks" data-video="https://player.vimeo.com/video/131434965" onclick="openCity(event, 'Paris')" href="javascript:void(0)"> 
-            <p>minusPLUS</p>
-                <div class="smallspace"> </div> 
-            </div> 
-      <div class="w3-half fadeInBlock">      
-    <input type="image" src="Projects/7.svg" style="width:30%" alt="X" class="video tablinks" data-video="https://www.youtube.com/embed/1GMZYjFJiK0" onclick="openCity(event, 'Paris')" href="javascript:void(0)"> 
-          <p>minusPLUS</p>
-                <div class="smallspace"> </div> 
-          </div> 
-       <div class="w3-half fadeInBlock">     
-    <input type="image" src="Projects/8.svg" style="width:30%" alt="X" class="video tablinks" data-video="https://www.youtube.com/embed/YbA0geIXmFA" onclick="openCity(event, 'Paris')" href="javascript:void(0)">
-           <p>minusPLUS</p>
-                <div class="smallspace"> </div> 
-           </div> 
-    </div>
-    
-    
-    
-    
-    
-    
-<script>
+			<a href="javascript:void(0)" data-video="https://www.youtube.com/embed/LVQDzDt8Z3k" onclick="openCity(event, 'Paris')" class="video tablinks">
+			<img src="Projects/1.svg" style="width:30%" alt="X"></a>
+			<p>
+				minusPLUS
+			</p>
+			<div class="smallspace">
+			</div>
+		</div>
+		<div class="w3-half fadeInBlock">
+			<a href="javascript:void(0)" data-video="https://www.youtube.com/embed/LVQDzDt8Z3k" onclick="openCity(event, 'Paris')" class="video tablinks">
+			<img src="Projects/1.svg" style="width:30%" alt="X"></a>
+			<p>
+				minusPLUS
+			</p>
+			<div class="smallspace">
+			</div>
+		</div>
+		<div class="w3-half fadeInBlock">
+			<a href="javascript:void(0)" data-video="https://www.youtube.com/embed/LVQDzDt8Z3k" onclick="openCity(event, 'Paris')" class="video tablinks">
+			<img src="Projects/1.svg" style="width:30%" alt="X"></a>
+			<p>
+				minusPLUS
+			</p>
+			<div class="smallspace">
+			</div>
+		</div>
+		<div class="w3-half fadeInBlock">
+			<a href="javascript:void(0)" data-video="https://www.youtube.com/embed/LVQDzDt8Z3k" onclick="openCity(event, 'Paris')" class="video tablinks">
+			<img src="Projects/1.svg" style="width:30%" alt="X"></a>
+			<p>
+				minusPLUS
+			</p>
+			<div class="smallspace">
+			</div>
+		</div>
+		<div class="w3-half fadeInBlock">
+			<a href="javascript:void(0)" data-video="https://www.youtube.com/embed/LVQDzDt8Z3k" onclick="openCity(event, 'Paris')" class="video tablinks">
+			<img src="Projects/1.svg" style="width:30%" alt="X"></a>
+			<p>
+				minusPLUS
+			</p>
+			<div class="smallspace">
+			</div>
+		</div>
+		<div class="w3-half fadeInBlock">
+			<a href="javascript:void(0)" data-video="https://www.youtube.com/embed/LVQDzDt8Z3k" onclick="openCity(event, 'Paris')" class="video tablinks">
+			<img src="Projects/1.svg" style="width:30%" alt="X"></a>
+			<p>
+				minusPLUS
+			</p>
+			<div class="smallspace">
+			</div>
+		</div>
+		<div class="w3-half fadeInBlock">
+			<a href="javascript:void(0)" data-video="https://www.youtube.com/embed/LVQDzDt8Z3k" onclick="openCity(event, 'Paris')" class="video tablinks">
+			<img src="Projects/1.svg" style="width:30%" alt="X"></a>
+			<p>
+				minusPLUS
+			</p>
+			<div class="smallspace">
+			</div>
+		</div>
+		<div class="w3-half fadeInBlock">
+			<a href="javascript:void(0)" data-video="https://www.youtube.com/embed/LVQDzDt8Z3k" onclick="openCity(event, 'Paris')" class="video tablinks">
+			<img src="Projects/1.svg" style="width:30%" alt="X"></a>
+			<p>
+				minusPLUS
+			</p>
+			<div class="smallspace">
+			</div>
+		</div>
+	</div>
+	<script>
 function openCity(evt, cityName) {
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
@@ -390,13 +444,10 @@ function openCity(evt, cityName) {
 }
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
-</script>
-			
-		</div>
-    
-	
-  <div class="mediumspace">
-</div> 
+	</script>
+</div>
+<div class="mediumspace">
+</div>
 <div class="about fadeInBlock">
 	<div class="w3-row ">
 		<div class="w3-half">
@@ -437,21 +488,29 @@ document.getElementById("defaultOpen").click();
 			</p>
 		</div>
 		<div class="w3-half">
-			<p>Co-Developer for "SYN" (interactive murble musical interface), Mario Coppola
+			<p>
+				Co-Developer for "SYN" (interactive murble musical interface), Mario Coppola
 			</p>
-			<p>Co-Developer for "TACTO" (interactive musical table), Officine Tesla
+			<p>
+				Co-Developer for "TACTO" (interactive musical table), Officine Tesla
 			</p>
-			<p>Music Producer for "The Mo'Joes" interactive Entertainment, Tallin
+			<p>
+				Music Producer for "The Mo'Joes" interactive Entertainment, Tallin
 			</p>
-			<p>Developer, Livid instrument, Texas
+			<p>
+				Developer, Livid instrument, Texas
 			</p>
-			<p>Producer, Carosello Records, Milano
+			<p>
+				Producer, Carosello Records, Milano
 			</p>
-			<p>Musician, Producer, Sound Engineering, SONY Italia, Rome
+			<p>
+				Musician, Producer, Sound Engineering, SONY Italia, Rome
 			</p>
-			<p>Sound Engineering, MAYBESIX, Varese
+			<p>
+				Sound Engineering, MAYBESIX, Varese
 			</p>
-			<p>Video Game Composer, Milestone, Milano
+			<p>
+				Video Game Composer, Milestone, Milano
 			</p>
 		</div>
 	</div>
@@ -494,27 +553,18 @@ document.getElementById("defaultOpen").click();
 		</div>
 	</div>
 </div>
-    
-    
-    
- <div class="mediumspace">
+<div class="mediumspace">
 </div>
 <div class="contact fadeInBlock">
 	<div class="center">
-		
-		
 	</div>
-</div>   
-    
-    
-    
+</div>
 <script>
     $(".back").click(function() {
     $('html,body').animate({
         scrollTop: $(".start").offset().top},
         0);
 });
-    
     $(".video").click(function() {
     $('html,body').animate({
         scrollTop: $(".projects").offset().top},
@@ -525,12 +575,6 @@ document.getElementById("defaultOpen").click();
         scrollTop: $(".projects").offset().top},
         0);
 });
-   
-    
-    
-    
     </script>
-    
-    
 </body>
 </html>
