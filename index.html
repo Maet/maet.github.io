@@ -19,7 +19,7 @@
     $(window).on("load", function() {
         $(window).scroll(function() {
             $(".fadeInBlock").each(function() {
-                var objectBottom = $(this).offset().top + $(this).outerHeight()/2.3;
+                var objectBottom = $(this).offset().top + $(this).outerHeight()-90;
                 var windowBottom = $(window).scrollTop() + $(window).innerHeight();
                 if (objectBottom < windowBottom) {
                     if ($(this).css("opacity") == 0) {
