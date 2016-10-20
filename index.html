@@ -19,8 +19,8 @@
     $(window).on("load", function() {
         $(window).scroll(function() {
             $(".fadeInBlock").each(function() {
-                var objectBottom = $(this).offset().top + $(this).outerHeight()-90;
-                var windowBottom = $(window).scrollTop() + $(window).innerHeight();
+                var objectBottom = $(this).offset().top + $(this).outerHeight();
+                var windowBottom = $(window).scrollTop() + $(window).innerHeight()+90;
                 if (objectBottom < windowBottom) {
                     if ($(this).css("opacity") == 0) {
                         $(this).fadeTo(300, 1);
