@@ -18,7 +18,7 @@
     });
     $(window).on("load", function() {
         $(window).scroll(function() {
-            $(".fadeInBlock").each(function() {
+            $(".").each(function() {
                 var objectBottom = $(this).offset().top + $(this).outerHeight();
                 var windowBottom = $(window).scrollTop() + $(window).innerHeight();
                 if (objectBottom < windowBottom) {
@@ -131,7 +131,7 @@
     input:focus {
         outline: none;
     }
-    .fadeInBlock {
+    . {
         opacity: 0;
     }
     a:hover {
@@ -312,7 +312,7 @@
     <div class="w3-center">
         <input type="image" src="artworks/arrow.svg" class="arrow next1 w3-animate-fading" alt="X"> </div>
     <div class="space"> </div>
-    <div class="projects fadeInBlock">
+    <div class="projects ">
         <div class="center2">
             <h5>Progetti</h5> </div>
     </div>
@@ -534,42 +534,42 @@
     <a href="javascript:void(0)" class="tablinks start" onclick="openDiv(event, 'a1')" id="defaultOpen"></a>
     <div class="slideshow tabcontent w3-animate-opacity" id="a1">
         <div class="w3-row w3-padding-jumbo ">
-            <div class="w3-half fadeInBlock">
+            <div class="w3-half ">
                 <a href="javascript:void(0)" data-video="https://www.youtube.com/embed/LVQDzDt8Z3k" onclick="openDiv(event, 'a2')" class="video tablinks"> <img src="Projects/1.svg" style="width:30%" alt="X"> </a>
                 <p> minusPLUS </p>
                 <div class="smallspace"> </div>
             </div>
-            <div class="w3-half fadeInBlock">
+            <div class="w3-half ">
                 <a href="javascript:void(0)" data-video="https://www.youtube.com/embed/YbA0geIXmFA" onclick="openDiv(event, 'a3')" class="video tablinks"> <img src="Projects/2.svg" style="width:30%" alt="X"> </a>
                 <p> Lucidaconsole </p>
                 <div class="smallspace"> </div>
             </div>
-            <div class="w3-half fadeInBlock">
+            <div class="w3-half ">
                 <a href="javascript:void(0)" data-video="https://www.youtube.com/embed/hZGl7S5T4hY" onclick="openDiv(event, 'a4')" class="video tablinks"> <img src="Projects/3.svg" style="width:30%" alt="X"> </a>
                 <p> Lisa </p>
                 <div class="smallspace"> </div>
             </div>
-            <div class="w3-half fadeInBlock">
+            <div class="w3-half ">
                 <a href="javascript:void(0)" data-video="https://www.youtube.com/embed/Av7d1VuQg1M" onclick="openDiv(event, 'a5')" class="video tablinks"> <img src="Projects/4.svg" style="width:30%" alt="X"> </a>
                 <p> Singing 3D printer </p>
                 <div class="smallspace"> </div>
             </div>
-            <div class="w3-half fadeInBlock">
+            <div class="w3-half ">
                 <a href="javascript:void(0)" data-video="https://player.vimeo.com/video/163843683" onclick="openDiv(event, 'a6')" class="video tablinks"> <img src="Projects/5.svg" style="width:30%" alt="X"> </a>
                 <p> Syn </p>
                 <div class="smallspace"> </div>
             </div>
-            <div class="w3-half fadeInBlock">
+            <div class="w3-half ">
                 <a href="javascript:void(0)" data-video="https://player.vimeo.com/video/131434965" onclick="openDiv(event, 'a7')" class="video tablinks"> <img src="Projects/6.svg" style="width:30%" alt="X"> </a>
                 <p> Tacto </p>
                 <div class="smallspace"> </div>
             </div>
-            <div class="w3-half fadeInBlock">
+            <div class="w3-half ">
                 <a href="javascript:void(0)" data-video="https://www.youtube.com/embed/1GMZYjFJiK0" onclick="openDiv(event, 'a8')" class="video tablinks"> <img src="Projects/7.svg" style="width:30%" alt="X"> </a>
                 <p> Over </p>
                 <div class="smallspace"> </div>
             </div>
-            <div class="w3-half fadeInBlock">
+            <div class="w3-half ">
                 <a href="javascript:void(0)" onclick="openDiv(event, 'a9')" class="video tablinks"> <img src="Projects/8.svg" style="width:30%" alt="X"> </a>
                 <p> T </p>
                 <div class="smallspace"> </div>
@@ -594,12 +594,12 @@
         </script>
     </div>
     <div class="space"> </div>
-    <div class="projects fadeInBlock">
+    <div class="projects ">
         <div class="center2">
             <h5>CV</h5> </div>
     </div>
     <div class="smallspace"> </div>
-    <div class="about fadeInBlock">
+    <div class="about ">
         <div class="w3-row ">
             <div class="w3-third w3-padding-xlarge">
                 <p> Competenze </p>
@@ -610,7 +610,7 @@
         </div>
     </div>
     <div class="smallspace"> </div>
-    <div class="about fadeInBlock">
+    <div class="about ">
         <div class="w3-row">
             <div class="w3-third w3-padding-xlarge">
                 <p> Software knowledge </p>
@@ -621,7 +621,7 @@
         </div>
     </div>
     <div class="smallspace"> </div>
-    <div class="about fadeInBlock">
+    <div class="about ">
         <div class="w3-row ">
             <div class="w3-third w3-padding-xlarge">
                 <p> Esperienze professionali </p>
@@ -639,7 +639,7 @@
         </div>
     </div>
     <div class="smallspace"> </div>
-    <div class="about fadeInBlock">
+    <div class="about ">
         <div class="w3-row ">
             <div class="w3-third w3-padding-xlarge">
                 <p> Attività associative </p>
@@ -652,7 +652,7 @@
         </div>
     </div>
     <div class="smallspace"> </div>
-    <div class="about fadeInBlock">
+    <div class="about ">
         <div class="w3-row ">
             <div class="w3-third w3-padding-xlarge">
                 <p> Aree di interesse </p>
@@ -663,12 +663,12 @@
         </div>
     </div>
     <div class="space"> </div>
-    <div class="projects fadeInBlock">
+    <div class="projects ">
         <div class="center2">
             <h5>Contact</h5> </div>
     </div>
     <div class="smallspace"> </div>
-    <div class="id fadeInBlock">
+    <div class="id ">
         <div class="w3-row">
             <div class="w3-third w3-center w3-padding-small">
                 <p> Facebook </p>
@@ -685,7 +685,7 @@
         </div>
     </div>
     <div class="smallspace"> </div>
-    <div class="contact fadeInBlock">
+    <div class="contact ">
         <div class="center"> </div>
     </div>
     <div class="bottomspace"> </div>
